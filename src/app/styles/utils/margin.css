@@ -1,0 +1,772 @@
+/* ==========================================================================
+   margin — внешние отступы
+   --------------------------------------------------------------------------
+   Сгенерировано: node scripts/css/generate-margin.mjs --prefix cost-
+   Правьте генератор, а не этот файл.
+
+   Шкала: число в классе × 4px.
+   m-4 = 16px, m-2.5 = 10px, m-px = 1px, m-0 = 0.
+   Шаг задаётся флагом --step.
+   ========================================================================== */
+
+
+/* cost-m-* — все стороны */
+.cost-m-0 { margin: 0; }
+.cost-m-px { margin: 1px; }
+.cost-m-0\.5 { margin: 2px; }
+.cost-m-1 { margin: 4px; }
+.cost-m-1\.5 { margin: 6px; }
+.cost-m-2 { margin: 8px; }
+.cost-m-2\.5 { margin: 10px; }
+.cost-m-3 { margin: 12px; }
+.cost-m-3\.5 { margin: 14px; }
+.cost-m-4 { margin: 16px; }
+.cost-m-5 { margin: 20px; }
+.cost-m-6 { margin: 24px; }
+.cost-m-7 { margin: 28px; }
+.cost-m-8 { margin: 32px; }
+.cost-m-9 { margin: 36px; }
+.cost-m-10 { margin: 40px; }
+.cost-m-11 { margin: 44px; }
+.cost-m-12 { margin: 48px; }
+.cost-m-14 { margin: 56px; }
+.cost-m-16 { margin: 64px; }
+.cost-m-20 { margin: 80px; }
+.cost-m-24 { margin: 96px; }
+.cost-m-28 { margin: 112px; }
+.cost-m-32 { margin: 128px; }
+.cost-m-40 { margin: 160px; }
+.cost-m-48 { margin: 192px; }
+.cost-m-56 { margin: 224px; }
+.cost-m-64 { margin: 256px; }
+.cost-m-80 { margin: 320px; }
+.cost-m-96 { margin: 384px; }
+.cost-m-auto { margin: auto; }
+
+/* cost-mx-* — по горизонтали — слева и справа */
+.cost-mx-0 { margin-inline: 0; }
+.cost-mx-px { margin-inline: 1px; }
+.cost-mx-0\.5 { margin-inline: 2px; }
+.cost-mx-1 { margin-inline: 4px; }
+.cost-mx-1\.5 { margin-inline: 6px; }
+.cost-mx-2 { margin-inline: 8px; }
+.cost-mx-2\.5 { margin-inline: 10px; }
+.cost-mx-3 { margin-inline: 12px; }
+.cost-mx-3\.5 { margin-inline: 14px; }
+.cost-mx-4 { margin-inline: 16px; }
+.cost-mx-5 { margin-inline: 20px; }
+.cost-mx-6 { margin-inline: 24px; }
+.cost-mx-7 { margin-inline: 28px; }
+.cost-mx-8 { margin-inline: 32px; }
+.cost-mx-9 { margin-inline: 36px; }
+.cost-mx-10 { margin-inline: 40px; }
+.cost-mx-11 { margin-inline: 44px; }
+.cost-mx-12 { margin-inline: 48px; }
+.cost-mx-14 { margin-inline: 56px; }
+.cost-mx-16 { margin-inline: 64px; }
+.cost-mx-20 { margin-inline: 80px; }
+.cost-mx-24 { margin-inline: 96px; }
+.cost-mx-28 { margin-inline: 112px; }
+.cost-mx-32 { margin-inline: 128px; }
+.cost-mx-40 { margin-inline: 160px; }
+.cost-mx-48 { margin-inline: 192px; }
+.cost-mx-56 { margin-inline: 224px; }
+.cost-mx-64 { margin-inline: 256px; }
+.cost-mx-80 { margin-inline: 320px; }
+.cost-mx-96 { margin-inline: 384px; }
+.cost-mx-auto { margin-inline: auto; }
+
+/* cost-my-* — по вертикали — сверху и снизу */
+.cost-my-0 { margin-block: 0; }
+.cost-my-px { margin-block: 1px; }
+.cost-my-0\.5 { margin-block: 2px; }
+.cost-my-1 { margin-block: 4px; }
+.cost-my-1\.5 { margin-block: 6px; }
+.cost-my-2 { margin-block: 8px; }
+.cost-my-2\.5 { margin-block: 10px; }
+.cost-my-3 { margin-block: 12px; }
+.cost-my-3\.5 { margin-block: 14px; }
+.cost-my-4 { margin-block: 16px; }
+.cost-my-5 { margin-block: 20px; }
+.cost-my-6 { margin-block: 24px; }
+.cost-my-7 { margin-block: 28px; }
+.cost-my-8 { margin-block: 32px; }
+.cost-my-9 { margin-block: 36px; }
+.cost-my-10 { margin-block: 40px; }
+.cost-my-11 { margin-block: 44px; }
+.cost-my-12 { margin-block: 48px; }
+.cost-my-14 { margin-block: 56px; }
+.cost-my-16 { margin-block: 64px; }
+.cost-my-20 { margin-block: 80px; }
+.cost-my-24 { margin-block: 96px; }
+.cost-my-28 { margin-block: 112px; }
+.cost-my-32 { margin-block: 128px; }
+.cost-my-40 { margin-block: 160px; }
+.cost-my-48 { margin-block: 192px; }
+.cost-my-56 { margin-block: 224px; }
+.cost-my-64 { margin-block: 256px; }
+.cost-my-80 { margin-block: 320px; }
+.cost-my-96 { margin-block: 384px; }
+.cost-my-auto { margin-block: auto; }
+
+/* cost-mt-* — сверху */
+.cost-mt-0 { margin-top: 0; }
+.cost-mt-px { margin-top: 1px; }
+.cost-mt-0\.5 { margin-top: 2px; }
+.cost-mt-1 { margin-top: 4px; }
+.cost-mt-1\.5 { margin-top: 6px; }
+.cost-mt-2 { margin-top: 8px; }
+.cost-mt-2\.5 { margin-top: 10px; }
+.cost-mt-3 { margin-top: 12px; }
+.cost-mt-3\.5 { margin-top: 14px; }
+.cost-mt-4 { margin-top: 16px; }
+.cost-mt-5 { margin-top: 20px; }
+.cost-mt-6 { margin-top: 24px; }
+.cost-mt-7 { margin-top: 28px; }
+.cost-mt-8 { margin-top: 32px; }
+.cost-mt-9 { margin-top: 36px; }
+.cost-mt-10 { margin-top: 40px; }
+.cost-mt-11 { margin-top: 44px; }
+.cost-mt-12 { margin-top: 48px; }
+.cost-mt-14 { margin-top: 56px; }
+.cost-mt-16 { margin-top: 64px; }
+.cost-mt-20 { margin-top: 80px; }
+.cost-mt-24 { margin-top: 96px; }
+.cost-mt-28 { margin-top: 112px; }
+.cost-mt-32 { margin-top: 128px; }
+.cost-mt-40 { margin-top: 160px; }
+.cost-mt-48 { margin-top: 192px; }
+.cost-mt-56 { margin-top: 224px; }
+.cost-mt-64 { margin-top: 256px; }
+.cost-mt-80 { margin-top: 320px; }
+.cost-mt-96 { margin-top: 384px; }
+.cost-mt-auto { margin-top: auto; }
+
+/* cost-mr-* — справа */
+.cost-mr-0 { margin-right: 0; }
+.cost-mr-px { margin-right: 1px; }
+.cost-mr-0\.5 { margin-right: 2px; }
+.cost-mr-1 { margin-right: 4px; }
+.cost-mr-1\.5 { margin-right: 6px; }
+.cost-mr-2 { margin-right: 8px; }
+.cost-mr-2\.5 { margin-right: 10px; }
+.cost-mr-3 { margin-right: 12px; }
+.cost-mr-3\.5 { margin-right: 14px; }
+.cost-mr-4 { margin-right: 16px; }
+.cost-mr-5 { margin-right: 20px; }
+.cost-mr-6 { margin-right: 24px; }
+.cost-mr-7 { margin-right: 28px; }
+.cost-mr-8 { margin-right: 32px; }
+.cost-mr-9 { margin-right: 36px; }
+.cost-mr-10 { margin-right: 40px; }
+.cost-mr-11 { margin-right: 44px; }
+.cost-mr-12 { margin-right: 48px; }
+.cost-mr-14 { margin-right: 56px; }
+.cost-mr-16 { margin-right: 64px; }
+.cost-mr-20 { margin-right: 80px; }
+.cost-mr-24 { margin-right: 96px; }
+.cost-mr-28 { margin-right: 112px; }
+.cost-mr-32 { margin-right: 128px; }
+.cost-mr-40 { margin-right: 160px; }
+.cost-mr-48 { margin-right: 192px; }
+.cost-mr-56 { margin-right: 224px; }
+.cost-mr-64 { margin-right: 256px; }
+.cost-mr-80 { margin-right: 320px; }
+.cost-mr-96 { margin-right: 384px; }
+.cost-mr-auto { margin-right: auto; }
+
+/* cost-mb-* — снизу */
+.cost-mb-0 { margin-bottom: 0; }
+.cost-mb-px { margin-bottom: 1px; }
+.cost-mb-0\.5 { margin-bottom: 2px; }
+.cost-mb-1 { margin-bottom: 4px; }
+.cost-mb-1\.5 { margin-bottom: 6px; }
+.cost-mb-2 { margin-bottom: 8px; }
+.cost-mb-2\.5 { margin-bottom: 10px; }
+.cost-mb-3 { margin-bottom: 12px; }
+.cost-mb-3\.5 { margin-bottom: 14px; }
+.cost-mb-4 { margin-bottom: 16px; }
+.cost-mb-5 { margin-bottom: 20px; }
+.cost-mb-6 { margin-bottom: 24px; }
+.cost-mb-7 { margin-bottom: 28px; }
+.cost-mb-8 { margin-bottom: 32px; }
+.cost-mb-9 { margin-bottom: 36px; }
+.cost-mb-10 { margin-bottom: 40px; }
+.cost-mb-11 { margin-bottom: 44px; }
+.cost-mb-12 { margin-bottom: 48px; }
+.cost-mb-14 { margin-bottom: 56px; }
+.cost-mb-16 { margin-bottom: 64px; }
+.cost-mb-20 { margin-bottom: 80px; }
+.cost-mb-24 { margin-bottom: 96px; }
+.cost-mb-28 { margin-bottom: 112px; }
+.cost-mb-32 { margin-bottom: 128px; }
+.cost-mb-40 { margin-bottom: 160px; }
+.cost-mb-48 { margin-bottom: 192px; }
+.cost-mb-56 { margin-bottom: 224px; }
+.cost-mb-64 { margin-bottom: 256px; }
+.cost-mb-80 { margin-bottom: 320px; }
+.cost-mb-96 { margin-bottom: 384px; }
+.cost-mb-auto { margin-bottom: auto; }
+
+/* cost-ml-* — слева */
+.cost-ml-0 { margin-left: 0; }
+.cost-ml-px { margin-left: 1px; }
+.cost-ml-0\.5 { margin-left: 2px; }
+.cost-ml-1 { margin-left: 4px; }
+.cost-ml-1\.5 { margin-left: 6px; }
+.cost-ml-2 { margin-left: 8px; }
+.cost-ml-2\.5 { margin-left: 10px; }
+.cost-ml-3 { margin-left: 12px; }
+.cost-ml-3\.5 { margin-left: 14px; }
+.cost-ml-4 { margin-left: 16px; }
+.cost-ml-5 { margin-left: 20px; }
+.cost-ml-6 { margin-left: 24px; }
+.cost-ml-7 { margin-left: 28px; }
+.cost-ml-8 { margin-left: 32px; }
+.cost-ml-9 { margin-left: 36px; }
+.cost-ml-10 { margin-left: 40px; }
+.cost-ml-11 { margin-left: 44px; }
+.cost-ml-12 { margin-left: 48px; }
+.cost-ml-14 { margin-left: 56px; }
+.cost-ml-16 { margin-left: 64px; }
+.cost-ml-20 { margin-left: 80px; }
+.cost-ml-24 { margin-left: 96px; }
+.cost-ml-28 { margin-left: 112px; }
+.cost-ml-32 { margin-left: 128px; }
+.cost-ml-40 { margin-left: 160px; }
+.cost-ml-48 { margin-left: 192px; }
+.cost-ml-56 { margin-left: 224px; }
+.cost-ml-64 { margin-left: 256px; }
+.cost-ml-80 { margin-left: 320px; }
+.cost-ml-96 { margin-left: 384px; }
+.cost-ml-auto { margin-left: auto; }
+
+/* cost-ms-* — начало строки — слева в LTR, справа в RTL */
+.cost-ms-0 { margin-inline-start: 0; }
+.cost-ms-px { margin-inline-start: 1px; }
+.cost-ms-0\.5 { margin-inline-start: 2px; }
+.cost-ms-1 { margin-inline-start: 4px; }
+.cost-ms-1\.5 { margin-inline-start: 6px; }
+.cost-ms-2 { margin-inline-start: 8px; }
+.cost-ms-2\.5 { margin-inline-start: 10px; }
+.cost-ms-3 { margin-inline-start: 12px; }
+.cost-ms-3\.5 { margin-inline-start: 14px; }
+.cost-ms-4 { margin-inline-start: 16px; }
+.cost-ms-5 { margin-inline-start: 20px; }
+.cost-ms-6 { margin-inline-start: 24px; }
+.cost-ms-7 { margin-inline-start: 28px; }
+.cost-ms-8 { margin-inline-start: 32px; }
+.cost-ms-9 { margin-inline-start: 36px; }
+.cost-ms-10 { margin-inline-start: 40px; }
+.cost-ms-11 { margin-inline-start: 44px; }
+.cost-ms-12 { margin-inline-start: 48px; }
+.cost-ms-14 { margin-inline-start: 56px; }
+.cost-ms-16 { margin-inline-start: 64px; }
+.cost-ms-20 { margin-inline-start: 80px; }
+.cost-ms-24 { margin-inline-start: 96px; }
+.cost-ms-28 { margin-inline-start: 112px; }
+.cost-ms-32 { margin-inline-start: 128px; }
+.cost-ms-40 { margin-inline-start: 160px; }
+.cost-ms-48 { margin-inline-start: 192px; }
+.cost-ms-56 { margin-inline-start: 224px; }
+.cost-ms-64 { margin-inline-start: 256px; }
+.cost-ms-80 { margin-inline-start: 320px; }
+.cost-ms-96 { margin-inline-start: 384px; }
+.cost-ms-auto { margin-inline-start: auto; }
+
+/* cost-me-* — конец строки — справа в LTR, слева в RTL */
+.cost-me-0 { margin-inline-end: 0; }
+.cost-me-px { margin-inline-end: 1px; }
+.cost-me-0\.5 { margin-inline-end: 2px; }
+.cost-me-1 { margin-inline-end: 4px; }
+.cost-me-1\.5 { margin-inline-end: 6px; }
+.cost-me-2 { margin-inline-end: 8px; }
+.cost-me-2\.5 { margin-inline-end: 10px; }
+.cost-me-3 { margin-inline-end: 12px; }
+.cost-me-3\.5 { margin-inline-end: 14px; }
+.cost-me-4 { margin-inline-end: 16px; }
+.cost-me-5 { margin-inline-end: 20px; }
+.cost-me-6 { margin-inline-end: 24px; }
+.cost-me-7 { margin-inline-end: 28px; }
+.cost-me-8 { margin-inline-end: 32px; }
+.cost-me-9 { margin-inline-end: 36px; }
+.cost-me-10 { margin-inline-end: 40px; }
+.cost-me-11 { margin-inline-end: 44px; }
+.cost-me-12 { margin-inline-end: 48px; }
+.cost-me-14 { margin-inline-end: 56px; }
+.cost-me-16 { margin-inline-end: 64px; }
+.cost-me-20 { margin-inline-end: 80px; }
+.cost-me-24 { margin-inline-end: 96px; }
+.cost-me-28 { margin-inline-end: 112px; }
+.cost-me-32 { margin-inline-end: 128px; }
+.cost-me-40 { margin-inline-end: 160px; }
+.cost-me-48 { margin-inline-end: 192px; }
+.cost-me-56 { margin-inline-end: 224px; }
+.cost-me-64 { margin-inline-end: 256px; }
+.cost-me-80 { margin-inline-end: 320px; }
+.cost-me-96 { margin-inline-end: 384px; }
+.cost-me-auto { margin-inline-end: auto; }
+
+/* cost-mbs-* — начало блока, зависит от writing-mode */
+.cost-mbs-0 { margin-block-start: 0; }
+.cost-mbs-px { margin-block-start: 1px; }
+.cost-mbs-0\.5 { margin-block-start: 2px; }
+.cost-mbs-1 { margin-block-start: 4px; }
+.cost-mbs-1\.5 { margin-block-start: 6px; }
+.cost-mbs-2 { margin-block-start: 8px; }
+.cost-mbs-2\.5 { margin-block-start: 10px; }
+.cost-mbs-3 { margin-block-start: 12px; }
+.cost-mbs-3\.5 { margin-block-start: 14px; }
+.cost-mbs-4 { margin-block-start: 16px; }
+.cost-mbs-5 { margin-block-start: 20px; }
+.cost-mbs-6 { margin-block-start: 24px; }
+.cost-mbs-7 { margin-block-start: 28px; }
+.cost-mbs-8 { margin-block-start: 32px; }
+.cost-mbs-9 { margin-block-start: 36px; }
+.cost-mbs-10 { margin-block-start: 40px; }
+.cost-mbs-11 { margin-block-start: 44px; }
+.cost-mbs-12 { margin-block-start: 48px; }
+.cost-mbs-14 { margin-block-start: 56px; }
+.cost-mbs-16 { margin-block-start: 64px; }
+.cost-mbs-20 { margin-block-start: 80px; }
+.cost-mbs-24 { margin-block-start: 96px; }
+.cost-mbs-28 { margin-block-start: 112px; }
+.cost-mbs-32 { margin-block-start: 128px; }
+.cost-mbs-40 { margin-block-start: 160px; }
+.cost-mbs-48 { margin-block-start: 192px; }
+.cost-mbs-56 { margin-block-start: 224px; }
+.cost-mbs-64 { margin-block-start: 256px; }
+.cost-mbs-80 { margin-block-start: 320px; }
+.cost-mbs-96 { margin-block-start: 384px; }
+.cost-mbs-auto { margin-block-start: auto; }
+
+/* cost-mbe-* — конец блока */
+.cost-mbe-0 { margin-block-end: 0; }
+.cost-mbe-px { margin-block-end: 1px; }
+.cost-mbe-0\.5 { margin-block-end: 2px; }
+.cost-mbe-1 { margin-block-end: 4px; }
+.cost-mbe-1\.5 { margin-block-end: 6px; }
+.cost-mbe-2 { margin-block-end: 8px; }
+.cost-mbe-2\.5 { margin-block-end: 10px; }
+.cost-mbe-3 { margin-block-end: 12px; }
+.cost-mbe-3\.5 { margin-block-end: 14px; }
+.cost-mbe-4 { margin-block-end: 16px; }
+.cost-mbe-5 { margin-block-end: 20px; }
+.cost-mbe-6 { margin-block-end: 24px; }
+.cost-mbe-7 { margin-block-end: 28px; }
+.cost-mbe-8 { margin-block-end: 32px; }
+.cost-mbe-9 { margin-block-end: 36px; }
+.cost-mbe-10 { margin-block-end: 40px; }
+.cost-mbe-11 { margin-block-end: 44px; }
+.cost-mbe-12 { margin-block-end: 48px; }
+.cost-mbe-14 { margin-block-end: 56px; }
+.cost-mbe-16 { margin-block-end: 64px; }
+.cost-mbe-20 { margin-block-end: 80px; }
+.cost-mbe-24 { margin-block-end: 96px; }
+.cost-mbe-28 { margin-block-end: 112px; }
+.cost-mbe-32 { margin-block-end: 128px; }
+.cost-mbe-40 { margin-block-end: 160px; }
+.cost-mbe-48 { margin-block-end: 192px; }
+.cost-mbe-56 { margin-block-end: 224px; }
+.cost-mbe-64 { margin-block-end: 256px; }
+.cost-mbe-80 { margin-block-end: 320px; }
+.cost-mbe-96 { margin-block-end: 384px; }
+.cost-mbe-auto { margin-block-end: auto; }
+
+/* Отрицательные отступы: -cost-m-4, -cost-mt-px и так далее.
+   Вытягивают элемент за пределы родителя — например, чтобы картинка
+   в карточке легла вплотную к её краям поверх внутреннего padding. */
+.-cost-m-px { margin: -1px; }
+.-cost-m-0\.5 { margin: -2px; }
+.-cost-m-1 { margin: -4px; }
+.-cost-m-1\.5 { margin: -6px; }
+.-cost-m-2 { margin: -8px; }
+.-cost-m-2\.5 { margin: -10px; }
+.-cost-m-3 { margin: -12px; }
+.-cost-m-3\.5 { margin: -14px; }
+.-cost-m-4 { margin: -16px; }
+.-cost-m-5 { margin: -20px; }
+.-cost-m-6 { margin: -24px; }
+.-cost-m-7 { margin: -28px; }
+.-cost-m-8 { margin: -32px; }
+.-cost-m-9 { margin: -36px; }
+.-cost-m-10 { margin: -40px; }
+.-cost-m-11 { margin: -44px; }
+.-cost-m-12 { margin: -48px; }
+.-cost-m-14 { margin: -56px; }
+.-cost-m-16 { margin: -64px; }
+.-cost-m-20 { margin: -80px; }
+.-cost-m-24 { margin: -96px; }
+.-cost-m-28 { margin: -112px; }
+.-cost-m-32 { margin: -128px; }
+.-cost-m-40 { margin: -160px; }
+.-cost-m-48 { margin: -192px; }
+.-cost-m-56 { margin: -224px; }
+.-cost-m-64 { margin: -256px; }
+.-cost-m-80 { margin: -320px; }
+.-cost-m-96 { margin: -384px; }
+.-cost-mx-px { margin-inline: -1px; }
+.-cost-mx-0\.5 { margin-inline: -2px; }
+.-cost-mx-1 { margin-inline: -4px; }
+.-cost-mx-1\.5 { margin-inline: -6px; }
+.-cost-mx-2 { margin-inline: -8px; }
+.-cost-mx-2\.5 { margin-inline: -10px; }
+.-cost-mx-3 { margin-inline: -12px; }
+.-cost-mx-3\.5 { margin-inline: -14px; }
+.-cost-mx-4 { margin-inline: -16px; }
+.-cost-mx-5 { margin-inline: -20px; }
+.-cost-mx-6 { margin-inline: -24px; }
+.-cost-mx-7 { margin-inline: -28px; }
+.-cost-mx-8 { margin-inline: -32px; }
+.-cost-mx-9 { margin-inline: -36px; }
+.-cost-mx-10 { margin-inline: -40px; }
+.-cost-mx-11 { margin-inline: -44px; }
+.-cost-mx-12 { margin-inline: -48px; }
+.-cost-mx-14 { margin-inline: -56px; }
+.-cost-mx-16 { margin-inline: -64px; }
+.-cost-mx-20 { margin-inline: -80px; }
+.-cost-mx-24 { margin-inline: -96px; }
+.-cost-mx-28 { margin-inline: -112px; }
+.-cost-mx-32 { margin-inline: -128px; }
+.-cost-mx-40 { margin-inline: -160px; }
+.-cost-mx-48 { margin-inline: -192px; }
+.-cost-mx-56 { margin-inline: -224px; }
+.-cost-mx-64 { margin-inline: -256px; }
+.-cost-mx-80 { margin-inline: -320px; }
+.-cost-mx-96 { margin-inline: -384px; }
+.-cost-my-px { margin-block: -1px; }
+.-cost-my-0\.5 { margin-block: -2px; }
+.-cost-my-1 { margin-block: -4px; }
+.-cost-my-1\.5 { margin-block: -6px; }
+.-cost-my-2 { margin-block: -8px; }
+.-cost-my-2\.5 { margin-block: -10px; }
+.-cost-my-3 { margin-block: -12px; }
+.-cost-my-3\.5 { margin-block: -14px; }
+.-cost-my-4 { margin-block: -16px; }
+.-cost-my-5 { margin-block: -20px; }
+.-cost-my-6 { margin-block: -24px; }
+.-cost-my-7 { margin-block: -28px; }
+.-cost-my-8 { margin-block: -32px; }
+.-cost-my-9 { margin-block: -36px; }
+.-cost-my-10 { margin-block: -40px; }
+.-cost-my-11 { margin-block: -44px; }
+.-cost-my-12 { margin-block: -48px; }
+.-cost-my-14 { margin-block: -56px; }
+.-cost-my-16 { margin-block: -64px; }
+.-cost-my-20 { margin-block: -80px; }
+.-cost-my-24 { margin-block: -96px; }
+.-cost-my-28 { margin-block: -112px; }
+.-cost-my-32 { margin-block: -128px; }
+.-cost-my-40 { margin-block: -160px; }
+.-cost-my-48 { margin-block: -192px; }
+.-cost-my-56 { margin-block: -224px; }
+.-cost-my-64 { margin-block: -256px; }
+.-cost-my-80 { margin-block: -320px; }
+.-cost-my-96 { margin-block: -384px; }
+.-cost-mt-px { margin-top: -1px; }
+.-cost-mt-0\.5 { margin-top: -2px; }
+.-cost-mt-1 { margin-top: -4px; }
+.-cost-mt-1\.5 { margin-top: -6px; }
+.-cost-mt-2 { margin-top: -8px; }
+.-cost-mt-2\.5 { margin-top: -10px; }
+.-cost-mt-3 { margin-top: -12px; }
+.-cost-mt-3\.5 { margin-top: -14px; }
+.-cost-mt-4 { margin-top: -16px; }
+.-cost-mt-5 { margin-top: -20px; }
+.-cost-mt-6 { margin-top: -24px; }
+.-cost-mt-7 { margin-top: -28px; }
+.-cost-mt-8 { margin-top: -32px; }
+.-cost-mt-9 { margin-top: -36px; }
+.-cost-mt-10 { margin-top: -40px; }
+.-cost-mt-11 { margin-top: -44px; }
+.-cost-mt-12 { margin-top: -48px; }
+.-cost-mt-14 { margin-top: -56px; }
+.-cost-mt-16 { margin-top: -64px; }
+.-cost-mt-20 { margin-top: -80px; }
+.-cost-mt-24 { margin-top: -96px; }
+.-cost-mt-28 { margin-top: -112px; }
+.-cost-mt-32 { margin-top: -128px; }
+.-cost-mt-40 { margin-top: -160px; }
+.-cost-mt-48 { margin-top: -192px; }
+.-cost-mt-56 { margin-top: -224px; }
+.-cost-mt-64 { margin-top: -256px; }
+.-cost-mt-80 { margin-top: -320px; }
+.-cost-mt-96 { margin-top: -384px; }
+.-cost-mr-px { margin-right: -1px; }
+.-cost-mr-0\.5 { margin-right: -2px; }
+.-cost-mr-1 { margin-right: -4px; }
+.-cost-mr-1\.5 { margin-right: -6px; }
+.-cost-mr-2 { margin-right: -8px; }
+.-cost-mr-2\.5 { margin-right: -10px; }
+.-cost-mr-3 { margin-right: -12px; }
+.-cost-mr-3\.5 { margin-right: -14px; }
+.-cost-mr-4 { margin-right: -16px; }
+.-cost-mr-5 { margin-right: -20px; }
+.-cost-mr-6 { margin-right: -24px; }
+.-cost-mr-7 { margin-right: -28px; }
+.-cost-mr-8 { margin-right: -32px; }
+.-cost-mr-9 { margin-right: -36px; }
+.-cost-mr-10 { margin-right: -40px; }
+.-cost-mr-11 { margin-right: -44px; }
+.-cost-mr-12 { margin-right: -48px; }
+.-cost-mr-14 { margin-right: -56px; }
+.-cost-mr-16 { margin-right: -64px; }
+.-cost-mr-20 { margin-right: -80px; }
+.-cost-mr-24 { margin-right: -96px; }
+.-cost-mr-28 { margin-right: -112px; }
+.-cost-mr-32 { margin-right: -128px; }
+.-cost-mr-40 { margin-right: -160px; }
+.-cost-mr-48 { margin-right: -192px; }
+.-cost-mr-56 { margin-right: -224px; }
+.-cost-mr-64 { margin-right: -256px; }
+.-cost-mr-80 { margin-right: -320px; }
+.-cost-mr-96 { margin-right: -384px; }
+.-cost-mb-px { margin-bottom: -1px; }
+.-cost-mb-0\.5 { margin-bottom: -2px; }
+.-cost-mb-1 { margin-bottom: -4px; }
+.-cost-mb-1\.5 { margin-bottom: -6px; }
+.-cost-mb-2 { margin-bottom: -8px; }
+.-cost-mb-2\.5 { margin-bottom: -10px; }
+.-cost-mb-3 { margin-bottom: -12px; }
+.-cost-mb-3\.5 { margin-bottom: -14px; }
+.-cost-mb-4 { margin-bottom: -16px; }
+.-cost-mb-5 { margin-bottom: -20px; }
+.-cost-mb-6 { margin-bottom: -24px; }
+.-cost-mb-7 { margin-bottom: -28px; }
+.-cost-mb-8 { margin-bottom: -32px; }
+.-cost-mb-9 { margin-bottom: -36px; }
+.-cost-mb-10 { margin-bottom: -40px; }
+.-cost-mb-11 { margin-bottom: -44px; }
+.-cost-mb-12 { margin-bottom: -48px; }
+.-cost-mb-14 { margin-bottom: -56px; }
+.-cost-mb-16 { margin-bottom: -64px; }
+.-cost-mb-20 { margin-bottom: -80px; }
+.-cost-mb-24 { margin-bottom: -96px; }
+.-cost-mb-28 { margin-bottom: -112px; }
+.-cost-mb-32 { margin-bottom: -128px; }
+.-cost-mb-40 { margin-bottom: -160px; }
+.-cost-mb-48 { margin-bottom: -192px; }
+.-cost-mb-56 { margin-bottom: -224px; }
+.-cost-mb-64 { margin-bottom: -256px; }
+.-cost-mb-80 { margin-bottom: -320px; }
+.-cost-mb-96 { margin-bottom: -384px; }
+.-cost-ml-px { margin-left: -1px; }
+.-cost-ml-0\.5 { margin-left: -2px; }
+.-cost-ml-1 { margin-left: -4px; }
+.-cost-ml-1\.5 { margin-left: -6px; }
+.-cost-ml-2 { margin-left: -8px; }
+.-cost-ml-2\.5 { margin-left: -10px; }
+.-cost-ml-3 { margin-left: -12px; }
+.-cost-ml-3\.5 { margin-left: -14px; }
+.-cost-ml-4 { margin-left: -16px; }
+.-cost-ml-5 { margin-left: -20px; }
+.-cost-ml-6 { margin-left: -24px; }
+.-cost-ml-7 { margin-left: -28px; }
+.-cost-ml-8 { margin-left: -32px; }
+.-cost-ml-9 { margin-left: -36px; }
+.-cost-ml-10 { margin-left: -40px; }
+.-cost-ml-11 { margin-left: -44px; }
+.-cost-ml-12 { margin-left: -48px; }
+.-cost-ml-14 { margin-left: -56px; }
+.-cost-ml-16 { margin-left: -64px; }
+.-cost-ml-20 { margin-left: -80px; }
+.-cost-ml-24 { margin-left: -96px; }
+.-cost-ml-28 { margin-left: -112px; }
+.-cost-ml-32 { margin-left: -128px; }
+.-cost-ml-40 { margin-left: -160px; }
+.-cost-ml-48 { margin-left: -192px; }
+.-cost-ml-56 { margin-left: -224px; }
+.-cost-ml-64 { margin-left: -256px; }
+.-cost-ml-80 { margin-left: -320px; }
+.-cost-ml-96 { margin-left: -384px; }
+.-cost-ms-px { margin-inline-start: -1px; }
+.-cost-ms-0\.5 { margin-inline-start: -2px; }
+.-cost-ms-1 { margin-inline-start: -4px; }
+.-cost-ms-1\.5 { margin-inline-start: -6px; }
+.-cost-ms-2 { margin-inline-start: -8px; }
+.-cost-ms-2\.5 { margin-inline-start: -10px; }
+.-cost-ms-3 { margin-inline-start: -12px; }
+.-cost-ms-3\.5 { margin-inline-start: -14px; }
+.-cost-ms-4 { margin-inline-start: -16px; }
+.-cost-ms-5 { margin-inline-start: -20px; }
+.-cost-ms-6 { margin-inline-start: -24px; }
+.-cost-ms-7 { margin-inline-start: -28px; }
+.-cost-ms-8 { margin-inline-start: -32px; }
+.-cost-ms-9 { margin-inline-start: -36px; }
+.-cost-ms-10 { margin-inline-start: -40px; }
+.-cost-ms-11 { margin-inline-start: -44px; }
+.-cost-ms-12 { margin-inline-start: -48px; }
+.-cost-ms-14 { margin-inline-start: -56px; }
+.-cost-ms-16 { margin-inline-start: -64px; }
+.-cost-ms-20 { margin-inline-start: -80px; }
+.-cost-ms-24 { margin-inline-start: -96px; }
+.-cost-ms-28 { margin-inline-start: -112px; }
+.-cost-ms-32 { margin-inline-start: -128px; }
+.-cost-ms-40 { margin-inline-start: -160px; }
+.-cost-ms-48 { margin-inline-start: -192px; }
+.-cost-ms-56 { margin-inline-start: -224px; }
+.-cost-ms-64 { margin-inline-start: -256px; }
+.-cost-ms-80 { margin-inline-start: -320px; }
+.-cost-ms-96 { margin-inline-start: -384px; }
+.-cost-me-px { margin-inline-end: -1px; }
+.-cost-me-0\.5 { margin-inline-end: -2px; }
+.-cost-me-1 { margin-inline-end: -4px; }
+.-cost-me-1\.5 { margin-inline-end: -6px; }
+.-cost-me-2 { margin-inline-end: -8px; }
+.-cost-me-2\.5 { margin-inline-end: -10px; }
+.-cost-me-3 { margin-inline-end: -12px; }
+.-cost-me-3\.5 { margin-inline-end: -14px; }
+.-cost-me-4 { margin-inline-end: -16px; }
+.-cost-me-5 { margin-inline-end: -20px; }
+.-cost-me-6 { margin-inline-end: -24px; }
+.-cost-me-7 { margin-inline-end: -28px; }
+.-cost-me-8 { margin-inline-end: -32px; }
+.-cost-me-9 { margin-inline-end: -36px; }
+.-cost-me-10 { margin-inline-end: -40px; }
+.-cost-me-11 { margin-inline-end: -44px; }
+.-cost-me-12 { margin-inline-end: -48px; }
+.-cost-me-14 { margin-inline-end: -56px; }
+.-cost-me-16 { margin-inline-end: -64px; }
+.-cost-me-20 { margin-inline-end: -80px; }
+.-cost-me-24 { margin-inline-end: -96px; }
+.-cost-me-28 { margin-inline-end: -112px; }
+.-cost-me-32 { margin-inline-end: -128px; }
+.-cost-me-40 { margin-inline-end: -160px; }
+.-cost-me-48 { margin-inline-end: -192px; }
+.-cost-me-56 { margin-inline-end: -224px; }
+.-cost-me-64 { margin-inline-end: -256px; }
+.-cost-me-80 { margin-inline-end: -320px; }
+.-cost-me-96 { margin-inline-end: -384px; }
+.-cost-mbs-px { margin-block-start: -1px; }
+.-cost-mbs-0\.5 { margin-block-start: -2px; }
+.-cost-mbs-1 { margin-block-start: -4px; }
+.-cost-mbs-1\.5 { margin-block-start: -6px; }
+.-cost-mbs-2 { margin-block-start: -8px; }
+.-cost-mbs-2\.5 { margin-block-start: -10px; }
+.-cost-mbs-3 { margin-block-start: -12px; }
+.-cost-mbs-3\.5 { margin-block-start: -14px; }
+.-cost-mbs-4 { margin-block-start: -16px; }
+.-cost-mbs-5 { margin-block-start: -20px; }
+.-cost-mbs-6 { margin-block-start: -24px; }
+.-cost-mbs-7 { margin-block-start: -28px; }
+.-cost-mbs-8 { margin-block-start: -32px; }
+.-cost-mbs-9 { margin-block-start: -36px; }
+.-cost-mbs-10 { margin-block-start: -40px; }
+.-cost-mbs-11 { margin-block-start: -44px; }
+.-cost-mbs-12 { margin-block-start: -48px; }
+.-cost-mbs-14 { margin-block-start: -56px; }
+.-cost-mbs-16 { margin-block-start: -64px; }
+.-cost-mbs-20 { margin-block-start: -80px; }
+.-cost-mbs-24 { margin-block-start: -96px; }
+.-cost-mbs-28 { margin-block-start: -112px; }
+.-cost-mbs-32 { margin-block-start: -128px; }
+.-cost-mbs-40 { margin-block-start: -160px; }
+.-cost-mbs-48 { margin-block-start: -192px; }
+.-cost-mbs-56 { margin-block-start: -224px; }
+.-cost-mbs-64 { margin-block-start: -256px; }
+.-cost-mbs-80 { margin-block-start: -320px; }
+.-cost-mbs-96 { margin-block-start: -384px; }
+.-cost-mbe-px { margin-block-end: -1px; }
+.-cost-mbe-0\.5 { margin-block-end: -2px; }
+.-cost-mbe-1 { margin-block-end: -4px; }
+.-cost-mbe-1\.5 { margin-block-end: -6px; }
+.-cost-mbe-2 { margin-block-end: -8px; }
+.-cost-mbe-2\.5 { margin-block-end: -10px; }
+.-cost-mbe-3 { margin-block-end: -12px; }
+.-cost-mbe-3\.5 { margin-block-end: -14px; }
+.-cost-mbe-4 { margin-block-end: -16px; }
+.-cost-mbe-5 { margin-block-end: -20px; }
+.-cost-mbe-6 { margin-block-end: -24px; }
+.-cost-mbe-7 { margin-block-end: -28px; }
+.-cost-mbe-8 { margin-block-end: -32px; }
+.-cost-mbe-9 { margin-block-end: -36px; }
+.-cost-mbe-10 { margin-block-end: -40px; }
+.-cost-mbe-11 { margin-block-end: -44px; }
+.-cost-mbe-12 { margin-block-end: -48px; }
+.-cost-mbe-14 { margin-block-end: -56px; }
+.-cost-mbe-16 { margin-block-end: -64px; }
+.-cost-mbe-20 { margin-block-end: -80px; }
+.-cost-mbe-24 { margin-block-end: -96px; }
+.-cost-mbe-28 { margin-block-end: -112px; }
+.-cost-mbe-32 { margin-block-end: -128px; }
+.-cost-mbe-40 { margin-block-end: -160px; }
+.-cost-mbe-48 { margin-block-end: -192px; }
+.-cost-mbe-56 { margin-block-end: -224px; }
+.-cost-mbe-64 { margin-block-end: -256px; }
+.-cost-mbe-80 { margin-block-end: -320px; }
+.-cost-mbe-96 { margin-block-end: -384px; }
+
+/* space-* — отступ между соседними детьми: margin получают все, кроме первого.
+   Ломается при переносе строк и конфликтует с собственными margin детей,
+   поэтому во flex- и grid-контейнерах почти всегда лучше gap-* из flex.css.
+   Остаётся полезным там, где контейнер не flex и не grid. */
+.cost-space-x-0 > * + * { margin-inline-start: 0; }
+.cost-space-x-px > * + * { margin-inline-start: 1px; }
+.cost-space-x-0\.5 > * + * { margin-inline-start: 2px; }
+.cost-space-x-1 > * + * { margin-inline-start: 4px; }
+.cost-space-x-1\.5 > * + * { margin-inline-start: 6px; }
+.cost-space-x-2 > * + * { margin-inline-start: 8px; }
+.cost-space-x-2\.5 > * + * { margin-inline-start: 10px; }
+.cost-space-x-3 > * + * { margin-inline-start: 12px; }
+.cost-space-x-3\.5 > * + * { margin-inline-start: 14px; }
+.cost-space-x-4 > * + * { margin-inline-start: 16px; }
+.cost-space-x-5 > * + * { margin-inline-start: 20px; }
+.cost-space-x-6 > * + * { margin-inline-start: 24px; }
+.cost-space-x-7 > * + * { margin-inline-start: 28px; }
+.cost-space-x-8 > * + * { margin-inline-start: 32px; }
+.cost-space-x-9 > * + * { margin-inline-start: 36px; }
+.cost-space-x-10 > * + * { margin-inline-start: 40px; }
+.cost-space-x-11 > * + * { margin-inline-start: 44px; }
+.cost-space-x-12 > * + * { margin-inline-start: 48px; }
+.cost-space-x-14 > * + * { margin-inline-start: 56px; }
+.cost-space-x-16 > * + * { margin-inline-start: 64px; }
+.cost-space-x-20 > * + * { margin-inline-start: 80px; }
+.cost-space-x-24 > * + * { margin-inline-start: 96px; }
+.cost-space-x-28 > * + * { margin-inline-start: 112px; }
+.cost-space-x-32 > * + * { margin-inline-start: 128px; }
+.cost-space-x-40 > * + * { margin-inline-start: 160px; }
+.cost-space-x-48 > * + * { margin-inline-start: 192px; }
+.cost-space-x-56 > * + * { margin-inline-start: 224px; }
+.cost-space-x-64 > * + * { margin-inline-start: 256px; }
+.cost-space-x-80 > * + * { margin-inline-start: 320px; }
+.cost-space-x-96 > * + * { margin-inline-start: 384px; }
+.cost-space-y-0 > * + * { margin-block-start: 0; }
+.cost-space-y-px > * + * { margin-block-start: 1px; }
+.cost-space-y-0\.5 > * + * { margin-block-start: 2px; }
+.cost-space-y-1 > * + * { margin-block-start: 4px; }
+.cost-space-y-1\.5 > * + * { margin-block-start: 6px; }
+.cost-space-y-2 > * + * { margin-block-start: 8px; }
+.cost-space-y-2\.5 > * + * { margin-block-start: 10px; }
+.cost-space-y-3 > * + * { margin-block-start: 12px; }
+.cost-space-y-3\.5 > * + * { margin-block-start: 14px; }
+.cost-space-y-4 > * + * { margin-block-start: 16px; }
+.cost-space-y-5 > * + * { margin-block-start: 20px; }
+.cost-space-y-6 > * + * { margin-block-start: 24px; }
+.cost-space-y-7 > * + * { margin-block-start: 28px; }
+.cost-space-y-8 > * + * { margin-block-start: 32px; }
+.cost-space-y-9 > * + * { margin-block-start: 36px; }
+.cost-space-y-10 > * + * { margin-block-start: 40px; }
+.cost-space-y-11 > * + * { margin-block-start: 44px; }
+.cost-space-y-12 > * + * { margin-block-start: 48px; }
+.cost-space-y-14 > * + * { margin-block-start: 56px; }
+.cost-space-y-16 > * + * { margin-block-start: 64px; }
+.cost-space-y-20 > * + * { margin-block-start: 80px; }
+.cost-space-y-24 > * + * { margin-block-start: 96px; }
+.cost-space-y-28 > * + * { margin-block-start: 112px; }
+.cost-space-y-32 > * + * { margin-block-start: 128px; }
+.cost-space-y-40 > * + * { margin-block-start: 160px; }
+.cost-space-y-48 > * + * { margin-block-start: 192px; }
+.cost-space-y-56 > * + * { margin-block-start: 224px; }
+.cost-space-y-64 > * + * { margin-block-start: 256px; }
+.cost-space-y-80 > * + * { margin-block-start: 320px; }
+.cost-space-y-96 > * + * { margin-block-start: 384px; }
+
+/* --------------------------------------------------------------------------
+   Адаптивных вариантов здесь нет — нужный набор оборачивается вручную:
+
+   @media (min-width: 48rem) {
+     .cost-md:mt-8 { margin-top: 32px; }
+   }
+
+   Брейкпоинты как в Tailwind: sm 40rem, md 48rem, lg 64rem, xl 80rem, 2xl 96rem.
+   -------------------------------------------------------------------------- */

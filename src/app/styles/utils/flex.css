@@ -1,0 +1,264 @@
+/* ==========================================================================
+   flex — раскладка, выравнивание и gap
+   --------------------------------------------------------------------------
+   Сгенерировано: node scripts/css/generate-flex.mjs --prefix cost-
+   Правьте генератор, а не этот файл.
+
+   Шкала gap-* и basis-*: число в классе × 4px.
+   basis-4 = 16px, gap-2.5 = 10px, *-px = 1px, *-0 = 0.
+   Шаг задаётся флагом --step.
+   ========================================================================== */
+
+
+/* включение */
+.cost-flex { display: flex; }
+.cost-inline-flex { display: inline-flex; }
+
+/* направление главной оси */
+.cost-flex-row { flex-direction: row; }
+.cost-flex-row-reverse { flex-direction: row-reverse; }
+.cost-flex-col { flex-direction: column; }
+.cost-flex-col-reverse { flex-direction: column-reverse; }
+
+/* перенос на новую строку */
+.cost-flex-wrap { flex-wrap: wrap; }
+.cost-flex-nowrap { flex-wrap: nowrap; }
+.cost-flex-wrap-reverse { flex-wrap: wrap-reverse; }
+
+/* flex — сокращение grow/shrink/basis.
+   flex-1    = 1 1 0%   элементы получают равную ширину, своя игнорируется
+   flex-auto = 1 1 auto свободное место делится поверх естественной ширины */
+.cost-flex-1 { flex: 1; }
+.cost-flex-2 { flex: 2; }
+.cost-flex-3 { flex: 3; }
+.cost-flex-4 { flex: 4; }
+.cost-flex-5 { flex: 5; }
+.cost-flex-6 { flex: 6; }
+.cost-flex-7 { flex: 7; }
+.cost-flex-8 { flex: 8; }
+.cost-flex-9 { flex: 9; }
+.cost-flex-10 { flex: 10; }
+.cost-flex-11 { flex: 11; }
+.cost-flex-12 { flex: 12; }
+.cost-flex-auto { flex: auto; }
+.cost-flex-initial { flex: 0 auto; }
+.cost-flex-none { flex: none; }
+
+/* grow / shrink по отдельности */
+.cost-grow { flex-grow: 1; }
+.cost-grow-0 { flex-grow: 0; }
+.cost-shrink { flex-shrink: 1; }
+.cost-shrink-0 { flex-shrink: 0; }
+
+/* basis — стартовый размер элемента */
+.cost-basis-0 { flex-basis: 0; }
+.cost-basis-px { flex-basis: 1px; }
+.cost-basis-0\.5 { flex-basis: 2px; }
+.cost-basis-1 { flex-basis: 4px; }
+.cost-basis-1\.5 { flex-basis: 6px; }
+.cost-basis-2 { flex-basis: 8px; }
+.cost-basis-2\.5 { flex-basis: 10px; }
+.cost-basis-3 { flex-basis: 12px; }
+.cost-basis-3\.5 { flex-basis: 14px; }
+.cost-basis-4 { flex-basis: 16px; }
+.cost-basis-5 { flex-basis: 20px; }
+.cost-basis-6 { flex-basis: 24px; }
+.cost-basis-7 { flex-basis: 28px; }
+.cost-basis-8 { flex-basis: 32px; }
+.cost-basis-9 { flex-basis: 36px; }
+.cost-basis-10 { flex-basis: 40px; }
+.cost-basis-11 { flex-basis: 44px; }
+.cost-basis-12 { flex-basis: 48px; }
+.cost-basis-14 { flex-basis: 56px; }
+.cost-basis-16 { flex-basis: 64px; }
+.cost-basis-20 { flex-basis: 80px; }
+.cost-basis-24 { flex-basis: 96px; }
+.cost-basis-28 { flex-basis: 112px; }
+.cost-basis-32 { flex-basis: 128px; }
+.cost-basis-40 { flex-basis: 160px; }
+.cost-basis-48 { flex-basis: 192px; }
+.cost-basis-56 { flex-basis: 224px; }
+.cost-basis-64 { flex-basis: 256px; }
+.cost-basis-80 { flex-basis: 320px; }
+.cost-basis-96 { flex-basis: 384px; }
+.cost-basis-auto { flex-basis: auto; }
+.cost-basis-full { flex-basis: 100%; }
+.cost-basis-1\/2 { flex-basis: 50%; }
+.cost-basis-1\/3 { flex-basis: 33.333333%; }
+.cost-basis-2\/3 { flex-basis: 66.666667%; }
+.cost-basis-1\/4 { flex-basis: 25%; }
+.cost-basis-3\/4 { flex-basis: 75%; }
+
+/* order — визуальный порядок без правки DOM */
+.cost-order-1 { order: 1; }
+.cost-order-2 { order: 2; }
+.cost-order-3 { order: 3; }
+.cost-order-4 { order: 4; }
+.cost-order-5 { order: 5; }
+.cost-order-6 { order: 6; }
+.cost-order-7 { order: 7; }
+.cost-order-8 { order: 8; }
+.cost-order-9 { order: 9; }
+.cost-order-10 { order: 10; }
+.cost-order-11 { order: 11; }
+.cost-order-12 { order: 12; }
+.-cost-order-1 { order: -1; }
+.-cost-order-2 { order: -2; }
+.-cost-order-3 { order: -3; }
+.-cost-order-4 { order: -4; }
+.-cost-order-5 { order: -5; }
+.-cost-order-6 { order: -6; }
+.-cost-order-7 { order: -7; }
+.-cost-order-8 { order: -8; }
+.-cost-order-9 { order: -9; }
+.-cost-order-10 { order: -10; }
+.-cost-order-11 { order: -11; }
+.-cost-order-12 { order: -12; }
+.cost-order-first { order: -9999; }
+.cost-order-last { order: 9999; }
+.cost-order-none { order: 0; }
+
+/* justify-content — по главной оси.
+   -safe: при нехватке места выравнивание откатывается к началу,
+   элемент не уезжает за границу с недоступной прокруткой */
+.cost-justify-start { justify-content: flex-start; }
+.cost-justify-end { justify-content: flex-end; }
+.cost-justify-end-safe { justify-content: safe flex-end; }
+.cost-justify-center { justify-content: center; }
+.cost-justify-center-safe { justify-content: safe center; }
+.cost-justify-between { justify-content: space-between; }
+.cost-justify-around { justify-content: space-around; }
+.cost-justify-evenly { justify-content: space-evenly; }
+.cost-justify-stretch { justify-content: stretch; }
+.cost-justify-baseline { justify-content: baseline; }
+.cost-justify-normal { justify-content: normal; }
+
+/* align-items — по поперечной оси */
+.cost-items-start { align-items: flex-start; }
+.cost-items-end { align-items: flex-end; }
+.cost-items-end-safe { align-items: safe flex-end; }
+.cost-items-center { align-items: center; }
+.cost-items-center-safe { align-items: safe center; }
+.cost-items-baseline { align-items: baseline; }
+.cost-items-baseline-last { align-items: last baseline; }
+.cost-items-stretch { align-items: stretch; }
+
+/* align-self — переопределение для одного элемента */
+.cost-self-auto { align-self: auto; }
+.cost-self-start { align-self: flex-start; }
+.cost-self-end { align-self: flex-end; }
+.cost-self-center { align-self: center; }
+.cost-self-stretch { align-self: stretch; }
+.cost-self-baseline { align-self: baseline; }
+
+/* align-content — распределение рядов, нужен flex-wrap */
+.cost-content-normal { align-content: normal; }
+.cost-content-start { align-content: flex-start; }
+.cost-content-end { align-content: flex-end; }
+.cost-content-center { align-content: center; }
+.cost-content-between { align-content: space-between; }
+.cost-content-around { align-content: space-around; }
+.cost-content-evenly { align-content: space-evenly; }
+.cost-content-stretch { align-content: stretch; }
+
+/* gap — расстояние между элементами */
+.cost-gap-0 { gap: 0; }
+.cost-gap-px { gap: 1px; }
+.cost-gap-0\.5 { gap: 2px; }
+.cost-gap-1 { gap: 4px; }
+.cost-gap-1\.5 { gap: 6px; }
+.cost-gap-2 { gap: 8px; }
+.cost-gap-2\.5 { gap: 10px; }
+.cost-gap-3 { gap: 12px; }
+.cost-gap-3\.5 { gap: 14px; }
+.cost-gap-4 { gap: 16px; }
+.cost-gap-5 { gap: 20px; }
+.cost-gap-6 { gap: 24px; }
+.cost-gap-7 { gap: 28px; }
+.cost-gap-8 { gap: 32px; }
+.cost-gap-9 { gap: 36px; }
+.cost-gap-10 { gap: 40px; }
+.cost-gap-11 { gap: 44px; }
+.cost-gap-12 { gap: 48px; }
+.cost-gap-14 { gap: 56px; }
+.cost-gap-16 { gap: 64px; }
+.cost-gap-20 { gap: 80px; }
+.cost-gap-24 { gap: 96px; }
+.cost-gap-28 { gap: 112px; }
+.cost-gap-32 { gap: 128px; }
+.cost-gap-40 { gap: 160px; }
+.cost-gap-48 { gap: 192px; }
+.cost-gap-56 { gap: 224px; }
+.cost-gap-64 { gap: 256px; }
+.cost-gap-80 { gap: 320px; }
+.cost-gap-96 { gap: 384px; }
+.cost-gap-x-0 { column-gap: 0; }
+.cost-gap-x-px { column-gap: 1px; }
+.cost-gap-x-0\.5 { column-gap: 2px; }
+.cost-gap-x-1 { column-gap: 4px; }
+.cost-gap-x-1\.5 { column-gap: 6px; }
+.cost-gap-x-2 { column-gap: 8px; }
+.cost-gap-x-2\.5 { column-gap: 10px; }
+.cost-gap-x-3 { column-gap: 12px; }
+.cost-gap-x-3\.5 { column-gap: 14px; }
+.cost-gap-x-4 { column-gap: 16px; }
+.cost-gap-x-5 { column-gap: 20px; }
+.cost-gap-x-6 { column-gap: 24px; }
+.cost-gap-x-7 { column-gap: 28px; }
+.cost-gap-x-8 { column-gap: 32px; }
+.cost-gap-x-9 { column-gap: 36px; }
+.cost-gap-x-10 { column-gap: 40px; }
+.cost-gap-x-11 { column-gap: 44px; }
+.cost-gap-x-12 { column-gap: 48px; }
+.cost-gap-x-14 { column-gap: 56px; }
+.cost-gap-x-16 { column-gap: 64px; }
+.cost-gap-x-20 { column-gap: 80px; }
+.cost-gap-x-24 { column-gap: 96px; }
+.cost-gap-x-28 { column-gap: 112px; }
+.cost-gap-x-32 { column-gap: 128px; }
+.cost-gap-x-40 { column-gap: 160px; }
+.cost-gap-x-48 { column-gap: 192px; }
+.cost-gap-x-56 { column-gap: 224px; }
+.cost-gap-x-64 { column-gap: 256px; }
+.cost-gap-x-80 { column-gap: 320px; }
+.cost-gap-x-96 { column-gap: 384px; }
+.cost-gap-y-0 { row-gap: 0; }
+.cost-gap-y-px { row-gap: 1px; }
+.cost-gap-y-0\.5 { row-gap: 2px; }
+.cost-gap-y-1 { row-gap: 4px; }
+.cost-gap-y-1\.5 { row-gap: 6px; }
+.cost-gap-y-2 { row-gap: 8px; }
+.cost-gap-y-2\.5 { row-gap: 10px; }
+.cost-gap-y-3 { row-gap: 12px; }
+.cost-gap-y-3\.5 { row-gap: 14px; }
+.cost-gap-y-4 { row-gap: 16px; }
+.cost-gap-y-5 { row-gap: 20px; }
+.cost-gap-y-6 { row-gap: 24px; }
+.cost-gap-y-7 { row-gap: 28px; }
+.cost-gap-y-8 { row-gap: 32px; }
+.cost-gap-y-9 { row-gap: 36px; }
+.cost-gap-y-10 { row-gap: 40px; }
+.cost-gap-y-11 { row-gap: 44px; }
+.cost-gap-y-12 { row-gap: 48px; }
+.cost-gap-y-14 { row-gap: 56px; }
+.cost-gap-y-16 { row-gap: 64px; }
+.cost-gap-y-20 { row-gap: 80px; }
+.cost-gap-y-24 { row-gap: 96px; }
+.cost-gap-y-28 { row-gap: 112px; }
+.cost-gap-y-32 { row-gap: 128px; }
+.cost-gap-y-40 { row-gap: 160px; }
+.cost-gap-y-48 { row-gap: 192px; }
+.cost-gap-y-56 { row-gap: 224px; }
+.cost-gap-y-64 { row-gap: 256px; }
+.cost-gap-y-80 { row-gap: 320px; }
+.cost-gap-y-96 { row-gap: 384px; }
+
+/* --------------------------------------------------------------------------
+   Адаптивных вариантов здесь нет — нужный набор оборачивается вручную:
+
+   @media (min-width: 48rem) {
+     .cost-md:flex-row { flex-direction: row; }
+   }
+
+   Брейкпоинты как в Tailwind: sm 40rem, md 48rem, lg 64rem, xl 80rem, 2xl 96rem.
+   -------------------------------------------------------------------------- */

@@ -1,0 +1,13 @@
+.clean {
+  min-height: 100vh;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* контент занимает всю доступную высоту: встроенная страница
+   не должна прилипать к верху чужого контейнера */
+.clean > * {
+  flex: 1;
+}

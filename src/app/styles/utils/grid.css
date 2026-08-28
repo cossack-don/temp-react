@@ -1,0 +1,223 @@
+/* ==========================================================================
+   grid — гриды
+   --------------------------------------------------------------------------
+   Сгенерировано: node scripts/css/generate-grid.mjs --prefix cost-
+   Правьте генератор, а не этот файл.
+
+   gap-*, justify-content и align-items общие с флексом и лежат в flex.css.
+   Подключайте оба файла, если пользуетесь гридом.
+   ========================================================================== */
+
+
+/* включение */
+.cost-grid { display: grid; }
+.cost-inline-grid { display: inline-grid; }
+
+/* колонки. minmax(0, 1fr) вместо голого 1fr — чтобы длинное неразрывное слово
+   не раздувало колонку сверх её доли */
+.cost-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.cost-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cost-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cost-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cost-grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.cost-grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.cost-grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.cost-grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.cost-grid-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+.cost-grid-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+.cost-grid-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+.cost-grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.cost-grid-cols-none { grid-template-columns: none; }
+.cost-grid-cols-subgrid { grid-template-columns: subgrid; }
+
+/* строки */
+.cost-grid-rows-1 { grid-template-rows: repeat(1, minmax(0, 1fr)); }
+.cost-grid-rows-2 { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+.cost-grid-rows-3 { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.cost-grid-rows-4 { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+.cost-grid-rows-5 { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+.cost-grid-rows-6 { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+.cost-grid-rows-7 { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+.cost-grid-rows-8 { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+.cost-grid-rows-9 { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+.cost-grid-rows-10 { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+.cost-grid-rows-11 { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+.cost-grid-rows-12 { grid-template-rows: repeat(12, minmax(0, 1fr)); }
+.cost-grid-rows-none { grid-template-rows: none; }
+.cost-grid-rows-subgrid { grid-template-rows: subgrid; }
+
+/* размещение по колонкам. Отрицательный номер считает линии с конца */
+.cost-col-auto { grid-column: auto; }
+.cost-col-span-1 { grid-column: span 1 / span 1; }
+.cost-col-span-2 { grid-column: span 2 / span 2; }
+.cost-col-span-3 { grid-column: span 3 / span 3; }
+.cost-col-span-4 { grid-column: span 4 / span 4; }
+.cost-col-span-5 { grid-column: span 5 / span 5; }
+.cost-col-span-6 { grid-column: span 6 / span 6; }
+.cost-col-span-7 { grid-column: span 7 / span 7; }
+.cost-col-span-8 { grid-column: span 8 / span 8; }
+.cost-col-span-9 { grid-column: span 9 / span 9; }
+.cost-col-span-10 { grid-column: span 10 / span 10; }
+.cost-col-span-11 { grid-column: span 11 / span 11; }
+.cost-col-span-12 { grid-column: span 12 / span 12; }
+.cost-col-span-full { grid-column: 1 / -1; }
+.cost-col-start-1 { grid-column-start: 1; }
+.cost-col-start-2 { grid-column-start: 2; }
+.cost-col-start-3 { grid-column-start: 3; }
+.cost-col-start-4 { grid-column-start: 4; }
+.cost-col-start-5 { grid-column-start: 5; }
+.cost-col-start-6 { grid-column-start: 6; }
+.cost-col-start-7 { grid-column-start: 7; }
+.cost-col-start-8 { grid-column-start: 8; }
+.cost-col-start-9 { grid-column-start: 9; }
+.cost-col-start-10 { grid-column-start: 10; }
+.cost-col-start-11 { grid-column-start: 11; }
+.cost-col-start-12 { grid-column-start: 12; }
+.cost-col-start-13 { grid-column-start: 13; }
+.-cost-col-start-1 { grid-column-start: -1; }
+.-cost-col-start-2 { grid-column-start: -2; }
+.-cost-col-start-3 { grid-column-start: -3; }
+.-cost-col-start-4 { grid-column-start: -4; }
+.-cost-col-start-5 { grid-column-start: -5; }
+.-cost-col-start-6 { grid-column-start: -6; }
+.-cost-col-start-7 { grid-column-start: -7; }
+.-cost-col-start-8 { grid-column-start: -8; }
+.-cost-col-start-9 { grid-column-start: -9; }
+.-cost-col-start-10 { grid-column-start: -10; }
+.-cost-col-start-11 { grid-column-start: -11; }
+.-cost-col-start-12 { grid-column-start: -12; }
+.-cost-col-start-13 { grid-column-start: -13; }
+.cost-col-start-auto { grid-column-start: auto; }
+.cost-col-end-1 { grid-column-end: 1; }
+.cost-col-end-2 { grid-column-end: 2; }
+.cost-col-end-3 { grid-column-end: 3; }
+.cost-col-end-4 { grid-column-end: 4; }
+.cost-col-end-5 { grid-column-end: 5; }
+.cost-col-end-6 { grid-column-end: 6; }
+.cost-col-end-7 { grid-column-end: 7; }
+.cost-col-end-8 { grid-column-end: 8; }
+.cost-col-end-9 { grid-column-end: 9; }
+.cost-col-end-10 { grid-column-end: 10; }
+.cost-col-end-11 { grid-column-end: 11; }
+.cost-col-end-12 { grid-column-end: 12; }
+.cost-col-end-13 { grid-column-end: 13; }
+.-cost-col-end-1 { grid-column-end: -1; }
+.-cost-col-end-2 { grid-column-end: -2; }
+.-cost-col-end-3 { grid-column-end: -3; }
+.-cost-col-end-4 { grid-column-end: -4; }
+.-cost-col-end-5 { grid-column-end: -5; }
+.-cost-col-end-6 { grid-column-end: -6; }
+.-cost-col-end-7 { grid-column-end: -7; }
+.-cost-col-end-8 { grid-column-end: -8; }
+.-cost-col-end-9 { grid-column-end: -9; }
+.-cost-col-end-10 { grid-column-end: -10; }
+.-cost-col-end-11 { grid-column-end: -11; }
+.-cost-col-end-12 { grid-column-end: -12; }
+.-cost-col-end-13 { grid-column-end: -13; }
+.cost-col-end-auto { grid-column-end: auto; }
+
+/* размещение по строкам */
+.cost-row-auto { grid-row: auto; }
+.cost-row-span-1 { grid-row: span 1 / span 1; }
+.cost-row-span-2 { grid-row: span 2 / span 2; }
+.cost-row-span-3 { grid-row: span 3 / span 3; }
+.cost-row-span-4 { grid-row: span 4 / span 4; }
+.cost-row-span-5 { grid-row: span 5 / span 5; }
+.cost-row-span-6 { grid-row: span 6 / span 6; }
+.cost-row-span-7 { grid-row: span 7 / span 7; }
+.cost-row-span-8 { grid-row: span 8 / span 8; }
+.cost-row-span-9 { grid-row: span 9 / span 9; }
+.cost-row-span-10 { grid-row: span 10 / span 10; }
+.cost-row-span-11 { grid-row: span 11 / span 11; }
+.cost-row-span-12 { grid-row: span 12 / span 12; }
+.cost-row-span-full { grid-row: 1 / -1; }
+.cost-row-start-1 { grid-row-start: 1; }
+.cost-row-start-2 { grid-row-start: 2; }
+.cost-row-start-3 { grid-row-start: 3; }
+.cost-row-start-4 { grid-row-start: 4; }
+.cost-row-start-5 { grid-row-start: 5; }
+.cost-row-start-6 { grid-row-start: 6; }
+.cost-row-start-7 { grid-row-start: 7; }
+.cost-row-start-8 { grid-row-start: 8; }
+.cost-row-start-9 { grid-row-start: 9; }
+.cost-row-start-10 { grid-row-start: 10; }
+.cost-row-start-11 { grid-row-start: 11; }
+.cost-row-start-12 { grid-row-start: 12; }
+.cost-row-start-13 { grid-row-start: 13; }
+.cost-row-start-auto { grid-row-start: auto; }
+.cost-row-end-1 { grid-row-end: 1; }
+.cost-row-end-2 { grid-row-end: 2; }
+.cost-row-end-3 { grid-row-end: 3; }
+.cost-row-end-4 { grid-row-end: 4; }
+.cost-row-end-5 { grid-row-end: 5; }
+.cost-row-end-6 { grid-row-end: 6; }
+.cost-row-end-7 { grid-row-end: 7; }
+.cost-row-end-8 { grid-row-end: 8; }
+.cost-row-end-9 { grid-row-end: 9; }
+.cost-row-end-10 { grid-row-end: 10; }
+.cost-row-end-11 { grid-row-end: 11; }
+.cost-row-end-12 { grid-row-end: 12; }
+.cost-row-end-13 { grid-row-end: 13; }
+.cost-row-end-auto { grid-row-end: auto; }
+
+/* направление автозаполнения. dense переставляет элементы, чтобы
+   заполнить дыры — визуальный порядок разойдётся с порядком в DOM */
+.cost-grid-flow-row { grid-auto-flow: row; }
+.cost-grid-flow-col { grid-auto-flow: column; }
+.cost-grid-flow-dense { grid-auto-flow: dense; }
+.cost-grid-flow-row-dense { grid-auto-flow: row dense; }
+.cost-grid-flow-col-dense { grid-auto-flow: column dense; }
+
+/* размер треков, созданных автоматически */
+.cost-auto-cols-auto { grid-auto-columns: auto; }
+.cost-auto-cols-min { grid-auto-columns: min-content; }
+.cost-auto-cols-max { grid-auto-columns: max-content; }
+.cost-auto-cols-fr { grid-auto-columns: minmax(0, 1fr); }
+.cost-auto-rows-auto { grid-auto-rows: auto; }
+.cost-auto-rows-min { grid-auto-rows: min-content; }
+.cost-auto-rows-max { grid-auto-rows: max-content; }
+.cost-auto-rows-fr { grid-auto-rows: minmax(0, 1fr); }
+
+/* выравнивание содержимого ячеек по горизонтали — только grid,
+   во флексе justify-items не действует */
+.cost-justify-items-start { justify-items: start; }
+.cost-justify-items-end { justify-items: end; }
+.cost-justify-items-center { justify-items: center; }
+.cost-justify-items-stretch { justify-items: stretch; }
+.cost-justify-items-normal { justify-items: normal; }
+.cost-justify-self-auto { justify-self: auto; }
+.cost-justify-self-start { justify-self: start; }
+.cost-justify-self-end { justify-self: end; }
+.cost-justify-self-center { justify-self: center; }
+.cost-justify-self-stretch { justify-self: stretch; }
+
+/* place-* — сокращения для пары align + justify */
+.cost-place-items-start { place-items: start; }
+.cost-place-items-end { place-items: end; }
+.cost-place-items-center { place-items: center; }
+.cost-place-items-baseline { place-items: baseline; }
+.cost-place-items-stretch { place-items: stretch; }
+.cost-place-content-start { place-content: start; }
+.cost-place-content-end { place-content: end; }
+.cost-place-content-center { place-content: center; }
+.cost-place-content-between { place-content: space-between; }
+.cost-place-content-around { place-content: space-around; }
+.cost-place-content-evenly { place-content: space-evenly; }
+.cost-place-content-stretch { place-content: stretch; }
+.cost-place-self-auto { place-self: auto; }
+.cost-place-self-start { place-self: start; }
+.cost-place-self-end { place-self: end; }
+.cost-place-self-center { place-self: center; }
+.cost-place-self-stretch { place-self: stretch; }
+
+/* --------------------------------------------------------------------------
+   Расстояние между ячейками — gap-* из flex.css.
+
+   Адаптивных вариантов здесь нет — нужный набор оборачивается вручную:
+
+   @media (min-width: 48rem) {
+     .cost-md:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+   }
+
+   Брейкпоинты как в Tailwind: sm 40rem, md 48rem, lg 64rem, xl 80rem, 2xl 96rem.
+   -------------------------------------------------------------------------- */

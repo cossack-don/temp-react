@@ -1,0 +1,377 @@
+/* ==========================================================================
+   padding — внутренние отступы
+   --------------------------------------------------------------------------
+   Сгенерировано: node scripts/css/generate-padding.mjs --prefix cost-
+   Правьте генератор, а не этот файл.
+
+   Шкала: число в классе × 4px.
+   p-4 = 16px, p-2.5 = 10px, p-px = 1px, p-0 = 0.
+   Шаг задаётся флагом --step.
+   ========================================================================== */
+
+
+/* cost-p-* — все стороны */
+.cost-p-0 { padding: 0; }
+.cost-p-px { padding: 1px; }
+.cost-p-0\.5 { padding: 2px; }
+.cost-p-1 { padding: 4px; }
+.cost-p-1\.5 { padding: 6px; }
+.cost-p-2 { padding: 8px; }
+.cost-p-2\.5 { padding: 10px; }
+.cost-p-3 { padding: 12px; }
+.cost-p-3\.5 { padding: 14px; }
+.cost-p-4 { padding: 16px; }
+.cost-p-5 { padding: 20px; }
+.cost-p-6 { padding: 24px; }
+.cost-p-7 { padding: 28px; }
+.cost-p-8 { padding: 32px; }
+.cost-p-9 { padding: 36px; }
+.cost-p-10 { padding: 40px; }
+.cost-p-11 { padding: 44px; }
+.cost-p-12 { padding: 48px; }
+.cost-p-14 { padding: 56px; }
+.cost-p-16 { padding: 64px; }
+.cost-p-20 { padding: 80px; }
+.cost-p-24 { padding: 96px; }
+.cost-p-28 { padding: 112px; }
+.cost-p-32 { padding: 128px; }
+.cost-p-40 { padding: 160px; }
+.cost-p-48 { padding: 192px; }
+.cost-p-56 { padding: 224px; }
+.cost-p-64 { padding: 256px; }
+.cost-p-80 { padding: 320px; }
+.cost-p-96 { padding: 384px; }
+
+/* cost-px-* — по горизонтали — слева и справа */
+.cost-px-0 { padding-inline: 0; }
+.cost-px-px { padding-inline: 1px; }
+.cost-px-0\.5 { padding-inline: 2px; }
+.cost-px-1 { padding-inline: 4px; }
+.cost-px-1\.5 { padding-inline: 6px; }
+.cost-px-2 { padding-inline: 8px; }
+.cost-px-2\.5 { padding-inline: 10px; }
+.cost-px-3 { padding-inline: 12px; }
+.cost-px-3\.5 { padding-inline: 14px; }
+.cost-px-4 { padding-inline: 16px; }
+.cost-px-5 { padding-inline: 20px; }
+.cost-px-6 { padding-inline: 24px; }
+.cost-px-7 { padding-inline: 28px; }
+.cost-px-8 { padding-inline: 32px; }
+.cost-px-9 { padding-inline: 36px; }
+.cost-px-10 { padding-inline: 40px; }
+.cost-px-11 { padding-inline: 44px; }
+.cost-px-12 { padding-inline: 48px; }
+.cost-px-14 { padding-inline: 56px; }
+.cost-px-16 { padding-inline: 64px; }
+.cost-px-20 { padding-inline: 80px; }
+.cost-px-24 { padding-inline: 96px; }
+.cost-px-28 { padding-inline: 112px; }
+.cost-px-32 { padding-inline: 128px; }
+.cost-px-40 { padding-inline: 160px; }
+.cost-px-48 { padding-inline: 192px; }
+.cost-px-56 { padding-inline: 224px; }
+.cost-px-64 { padding-inline: 256px; }
+.cost-px-80 { padding-inline: 320px; }
+.cost-px-96 { padding-inline: 384px; }
+
+/* cost-py-* — по вертикали — сверху и снизу */
+.cost-py-0 { padding-block: 0; }
+.cost-py-px { padding-block: 1px; }
+.cost-py-0\.5 { padding-block: 2px; }
+.cost-py-1 { padding-block: 4px; }
+.cost-py-1\.5 { padding-block: 6px; }
+.cost-py-2 { padding-block: 8px; }
+.cost-py-2\.5 { padding-block: 10px; }
+.cost-py-3 { padding-block: 12px; }
+.cost-py-3\.5 { padding-block: 14px; }
+.cost-py-4 { padding-block: 16px; }
+.cost-py-5 { padding-block: 20px; }
+.cost-py-6 { padding-block: 24px; }
+.cost-py-7 { padding-block: 28px; }
+.cost-py-8 { padding-block: 32px; }
+.cost-py-9 { padding-block: 36px; }
+.cost-py-10 { padding-block: 40px; }
+.cost-py-11 { padding-block: 44px; }
+.cost-py-12 { padding-block: 48px; }
+.cost-py-14 { padding-block: 56px; }
+.cost-py-16 { padding-block: 64px; }
+.cost-py-20 { padding-block: 80px; }
+.cost-py-24 { padding-block: 96px; }
+.cost-py-28 { padding-block: 112px; }
+.cost-py-32 { padding-block: 128px; }
+.cost-py-40 { padding-block: 160px; }
+.cost-py-48 { padding-block: 192px; }
+.cost-py-56 { padding-block: 224px; }
+.cost-py-64 { padding-block: 256px; }
+.cost-py-80 { padding-block: 320px; }
+.cost-py-96 { padding-block: 384px; }
+
+/* cost-pt-* — сверху */
+.cost-pt-0 { padding-top: 0; }
+.cost-pt-px { padding-top: 1px; }
+.cost-pt-0\.5 { padding-top: 2px; }
+.cost-pt-1 { padding-top: 4px; }
+.cost-pt-1\.5 { padding-top: 6px; }
+.cost-pt-2 { padding-top: 8px; }
+.cost-pt-2\.5 { padding-top: 10px; }
+.cost-pt-3 { padding-top: 12px; }
+.cost-pt-3\.5 { padding-top: 14px; }
+.cost-pt-4 { padding-top: 16px; }
+.cost-pt-5 { padding-top: 20px; }
+.cost-pt-6 { padding-top: 24px; }
+.cost-pt-7 { padding-top: 28px; }
+.cost-pt-8 { padding-top: 32px; }
+.cost-pt-9 { padding-top: 36px; }
+.cost-pt-10 { padding-top: 40px; }
+.cost-pt-11 { padding-top: 44px; }
+.cost-pt-12 { padding-top: 48px; }
+.cost-pt-14 { padding-top: 56px; }
+.cost-pt-16 { padding-top: 64px; }
+.cost-pt-20 { padding-top: 80px; }
+.cost-pt-24 { padding-top: 96px; }
+.cost-pt-28 { padding-top: 112px; }
+.cost-pt-32 { padding-top: 128px; }
+.cost-pt-40 { padding-top: 160px; }
+.cost-pt-48 { padding-top: 192px; }
+.cost-pt-56 { padding-top: 224px; }
+.cost-pt-64 { padding-top: 256px; }
+.cost-pt-80 { padding-top: 320px; }
+.cost-pt-96 { padding-top: 384px; }
+
+/* cost-pr-* — справа */
+.cost-pr-0 { padding-right: 0; }
+.cost-pr-px { padding-right: 1px; }
+.cost-pr-0\.5 { padding-right: 2px; }
+.cost-pr-1 { padding-right: 4px; }
+.cost-pr-1\.5 { padding-right: 6px; }
+.cost-pr-2 { padding-right: 8px; }
+.cost-pr-2\.5 { padding-right: 10px; }
+.cost-pr-3 { padding-right: 12px; }
+.cost-pr-3\.5 { padding-right: 14px; }
+.cost-pr-4 { padding-right: 16px; }
+.cost-pr-5 { padding-right: 20px; }
+.cost-pr-6 { padding-right: 24px; }
+.cost-pr-7 { padding-right: 28px; }
+.cost-pr-8 { padding-right: 32px; }
+.cost-pr-9 { padding-right: 36px; }
+.cost-pr-10 { padding-right: 40px; }
+.cost-pr-11 { padding-right: 44px; }
+.cost-pr-12 { padding-right: 48px; }
+.cost-pr-14 { padding-right: 56px; }
+.cost-pr-16 { padding-right: 64px; }
+.cost-pr-20 { padding-right: 80px; }
+.cost-pr-24 { padding-right: 96px; }
+.cost-pr-28 { padding-right: 112px; }
+.cost-pr-32 { padding-right: 128px; }
+.cost-pr-40 { padding-right: 160px; }
+.cost-pr-48 { padding-right: 192px; }
+.cost-pr-56 { padding-right: 224px; }
+.cost-pr-64 { padding-right: 256px; }
+.cost-pr-80 { padding-right: 320px; }
+.cost-pr-96 { padding-right: 384px; }
+
+/* cost-pb-* — снизу */
+.cost-pb-0 { padding-bottom: 0; }
+.cost-pb-px { padding-bottom: 1px; }
+.cost-pb-0\.5 { padding-bottom: 2px; }
+.cost-pb-1 { padding-bottom: 4px; }
+.cost-pb-1\.5 { padding-bottom: 6px; }
+.cost-pb-2 { padding-bottom: 8px; }
+.cost-pb-2\.5 { padding-bottom: 10px; }
+.cost-pb-3 { padding-bottom: 12px; }
+.cost-pb-3\.5 { padding-bottom: 14px; }
+.cost-pb-4 { padding-bottom: 16px; }
+.cost-pb-5 { padding-bottom: 20px; }
+.cost-pb-6 { padding-bottom: 24px; }
+.cost-pb-7 { padding-bottom: 28px; }
+.cost-pb-8 { padding-bottom: 32px; }
+.cost-pb-9 { padding-bottom: 36px; }
+.cost-pb-10 { padding-bottom: 40px; }
+.cost-pb-11 { padding-bottom: 44px; }
+.cost-pb-12 { padding-bottom: 48px; }
+.cost-pb-14 { padding-bottom: 56px; }
+.cost-pb-16 { padding-bottom: 64px; }
+.cost-pb-20 { padding-bottom: 80px; }
+.cost-pb-24 { padding-bottom: 96px; }
+.cost-pb-28 { padding-bottom: 112px; }
+.cost-pb-32 { padding-bottom: 128px; }
+.cost-pb-40 { padding-bottom: 160px; }
+.cost-pb-48 { padding-bottom: 192px; }
+.cost-pb-56 { padding-bottom: 224px; }
+.cost-pb-64 { padding-bottom: 256px; }
+.cost-pb-80 { padding-bottom: 320px; }
+.cost-pb-96 { padding-bottom: 384px; }
+
+/* cost-pl-* — слева */
+.cost-pl-0 { padding-left: 0; }
+.cost-pl-px { padding-left: 1px; }
+.cost-pl-0\.5 { padding-left: 2px; }
+.cost-pl-1 { padding-left: 4px; }
+.cost-pl-1\.5 { padding-left: 6px; }
+.cost-pl-2 { padding-left: 8px; }
+.cost-pl-2\.5 { padding-left: 10px; }
+.cost-pl-3 { padding-left: 12px; }
+.cost-pl-3\.5 { padding-left: 14px; }
+.cost-pl-4 { padding-left: 16px; }
+.cost-pl-5 { padding-left: 20px; }
+.cost-pl-6 { padding-left: 24px; }
+.cost-pl-7 { padding-left: 28px; }
+.cost-pl-8 { padding-left: 32px; }
+.cost-pl-9 { padding-left: 36px; }
+.cost-pl-10 { padding-left: 40px; }
+.cost-pl-11 { padding-left: 44px; }
+.cost-pl-12 { padding-left: 48px; }
+.cost-pl-14 { padding-left: 56px; }
+.cost-pl-16 { padding-left: 64px; }
+.cost-pl-20 { padding-left: 80px; }
+.cost-pl-24 { padding-left: 96px; }
+.cost-pl-28 { padding-left: 112px; }
+.cost-pl-32 { padding-left: 128px; }
+.cost-pl-40 { padding-left: 160px; }
+.cost-pl-48 { padding-left: 192px; }
+.cost-pl-56 { padding-left: 224px; }
+.cost-pl-64 { padding-left: 256px; }
+.cost-pl-80 { padding-left: 320px; }
+.cost-pl-96 { padding-left: 384px; }
+
+/* cost-ps-* — начало строки — слева в LTR, справа в RTL */
+.cost-ps-0 { padding-inline-start: 0; }
+.cost-ps-px { padding-inline-start: 1px; }
+.cost-ps-0\.5 { padding-inline-start: 2px; }
+.cost-ps-1 { padding-inline-start: 4px; }
+.cost-ps-1\.5 { padding-inline-start: 6px; }
+.cost-ps-2 { padding-inline-start: 8px; }
+.cost-ps-2\.5 { padding-inline-start: 10px; }
+.cost-ps-3 { padding-inline-start: 12px; }
+.cost-ps-3\.5 { padding-inline-start: 14px; }
+.cost-ps-4 { padding-inline-start: 16px; }
+.cost-ps-5 { padding-inline-start: 20px; }
+.cost-ps-6 { padding-inline-start: 24px; }
+.cost-ps-7 { padding-inline-start: 28px; }
+.cost-ps-8 { padding-inline-start: 32px; }
+.cost-ps-9 { padding-inline-start: 36px; }
+.cost-ps-10 { padding-inline-start: 40px; }
+.cost-ps-11 { padding-inline-start: 44px; }
+.cost-ps-12 { padding-inline-start: 48px; }
+.cost-ps-14 { padding-inline-start: 56px; }
+.cost-ps-16 { padding-inline-start: 64px; }
+.cost-ps-20 { padding-inline-start: 80px; }
+.cost-ps-24 { padding-inline-start: 96px; }
+.cost-ps-28 { padding-inline-start: 112px; }
+.cost-ps-32 { padding-inline-start: 128px; }
+.cost-ps-40 { padding-inline-start: 160px; }
+.cost-ps-48 { padding-inline-start: 192px; }
+.cost-ps-56 { padding-inline-start: 224px; }
+.cost-ps-64 { padding-inline-start: 256px; }
+.cost-ps-80 { padding-inline-start: 320px; }
+.cost-ps-96 { padding-inline-start: 384px; }
+
+/* cost-pe-* — конец строки — справа в LTR, слева в RTL */
+.cost-pe-0 { padding-inline-end: 0; }
+.cost-pe-px { padding-inline-end: 1px; }
+.cost-pe-0\.5 { padding-inline-end: 2px; }
+.cost-pe-1 { padding-inline-end: 4px; }
+.cost-pe-1\.5 { padding-inline-end: 6px; }
+.cost-pe-2 { padding-inline-end: 8px; }
+.cost-pe-2\.5 { padding-inline-end: 10px; }
+.cost-pe-3 { padding-inline-end: 12px; }
+.cost-pe-3\.5 { padding-inline-end: 14px; }
+.cost-pe-4 { padding-inline-end: 16px; }
+.cost-pe-5 { padding-inline-end: 20px; }
+.cost-pe-6 { padding-inline-end: 24px; }
+.cost-pe-7 { padding-inline-end: 28px; }
+.cost-pe-8 { padding-inline-end: 32px; }
+.cost-pe-9 { padding-inline-end: 36px; }
+.cost-pe-10 { padding-inline-end: 40px; }
+.cost-pe-11 { padding-inline-end: 44px; }
+.cost-pe-12 { padding-inline-end: 48px; }
+.cost-pe-14 { padding-inline-end: 56px; }
+.cost-pe-16 { padding-inline-end: 64px; }
+.cost-pe-20 { padding-inline-end: 80px; }
+.cost-pe-24 { padding-inline-end: 96px; }
+.cost-pe-28 { padding-inline-end: 112px; }
+.cost-pe-32 { padding-inline-end: 128px; }
+.cost-pe-40 { padding-inline-end: 160px; }
+.cost-pe-48 { padding-inline-end: 192px; }
+.cost-pe-56 { padding-inline-end: 224px; }
+.cost-pe-64 { padding-inline-end: 256px; }
+.cost-pe-80 { padding-inline-end: 320px; }
+.cost-pe-96 { padding-inline-end: 384px; }
+
+/* cost-pbs-* — начало блока, зависит от writing-mode */
+.cost-pbs-0 { padding-block-start: 0; }
+.cost-pbs-px { padding-block-start: 1px; }
+.cost-pbs-0\.5 { padding-block-start: 2px; }
+.cost-pbs-1 { padding-block-start: 4px; }
+.cost-pbs-1\.5 { padding-block-start: 6px; }
+.cost-pbs-2 { padding-block-start: 8px; }
+.cost-pbs-2\.5 { padding-block-start: 10px; }
+.cost-pbs-3 { padding-block-start: 12px; }
+.cost-pbs-3\.5 { padding-block-start: 14px; }
+.cost-pbs-4 { padding-block-start: 16px; }
+.cost-pbs-5 { padding-block-start: 20px; }
+.cost-pbs-6 { padding-block-start: 24px; }
+.cost-pbs-7 { padding-block-start: 28px; }
+.cost-pbs-8 { padding-block-start: 32px; }
+.cost-pbs-9 { padding-block-start: 36px; }
+.cost-pbs-10 { padding-block-start: 40px; }
+.cost-pbs-11 { padding-block-start: 44px; }
+.cost-pbs-12 { padding-block-start: 48px; }
+.cost-pbs-14 { padding-block-start: 56px; }
+.cost-pbs-16 { padding-block-start: 64px; }
+.cost-pbs-20 { padding-block-start: 80px; }
+.cost-pbs-24 { padding-block-start: 96px; }
+.cost-pbs-28 { padding-block-start: 112px; }
+.cost-pbs-32 { padding-block-start: 128px; }
+.cost-pbs-40 { padding-block-start: 160px; }
+.cost-pbs-48 { padding-block-start: 192px; }
+.cost-pbs-56 { padding-block-start: 224px; }
+.cost-pbs-64 { padding-block-start: 256px; }
+.cost-pbs-80 { padding-block-start: 320px; }
+.cost-pbs-96 { padding-block-start: 384px; }
+
+/* cost-pbe-* — конец блока */
+.cost-pbe-0 { padding-block-end: 0; }
+.cost-pbe-px { padding-block-end: 1px; }
+.cost-pbe-0\.5 { padding-block-end: 2px; }
+.cost-pbe-1 { padding-block-end: 4px; }
+.cost-pbe-1\.5 { padding-block-end: 6px; }
+.cost-pbe-2 { padding-block-end: 8px; }
+.cost-pbe-2\.5 { padding-block-end: 10px; }
+.cost-pbe-3 { padding-block-end: 12px; }
+.cost-pbe-3\.5 { padding-block-end: 14px; }
+.cost-pbe-4 { padding-block-end: 16px; }
+.cost-pbe-5 { padding-block-end: 20px; }
+.cost-pbe-6 { padding-block-end: 24px; }
+.cost-pbe-7 { padding-block-end: 28px; }
+.cost-pbe-8 { padding-block-end: 32px; }
+.cost-pbe-9 { padding-block-end: 36px; }
+.cost-pbe-10 { padding-block-end: 40px; }
+.cost-pbe-11 { padding-block-end: 44px; }
+.cost-pbe-12 { padding-block-end: 48px; }
+.cost-pbe-14 { padding-block-end: 56px; }
+.cost-pbe-16 { padding-block-end: 64px; }
+.cost-pbe-20 { padding-block-end: 80px; }
+.cost-pbe-24 { padding-block-end: 96px; }
+.cost-pbe-28 { padding-block-end: 112px; }
+.cost-pbe-32 { padding-block-end: 128px; }
+.cost-pbe-40 { padding-block-end: 160px; }
+.cost-pbe-48 { padding-block-end: 192px; }
+.cost-pbe-56 { padding-block-end: 224px; }
+.cost-pbe-64 { padding-block-end: 256px; }
+.cost-pbe-80 { padding-block-end: 320px; }
+.cost-pbe-96 { padding-block-end: 384px; }
+
+/* --------------------------------------------------------------------------
+   Более конкретный класс перебивает более общий за счёт порядка в файле:
+   p-* идёт выше, значит "cost-p-4 cost-pt-8" даст сверху 32px,
+   а с остальных сторон 16px.
+
+   Адаптивных вариантов здесь нет — нужный набор оборачивается вручную:
+
+   @media (min-width: 48rem) {
+     .cost-md:p-8 { padding: 32px; }
+   }
+
+   Брейкпоинты как в Tailwind: sm 40rem, md 48rem, lg 64rem, xl 80rem, 2xl 96rem.
+   -------------------------------------------------------------------------- */

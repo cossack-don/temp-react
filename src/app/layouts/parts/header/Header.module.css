@@ -1,0 +1,135 @@
+/*
+ * Стили шапки. CSS-модуль: имена классов уникализируются при сборке,
+ * поэтому .header отсюда не столкнётся с .header из хоста в микрофронтенде.
+ */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  /* полупрозрачный фон с размытием: контент из-под шапки виден,
+     но не мешает читать навигацию */
+  background: var(--surface-translucent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* браузеры без backdrop-filter получают плотный фон, а не мутную кашу */
+@supports not (backdrop-filter: blur(1px)) {
+  .header {
+    background: var(--surface);
+  }
+}
+
+.inner {
+  max-width: 1040px;
+  min-height: var(--header-height);
+  margin-inline: auto;
+  padding-inline: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* квадратный знак с монограммой */
+.mark {
+  width: 26px;
+  height: 26px;
+  flex: none;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #5b4bd6);
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+.logo:focus-visible,
+.mark:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* метка режима сборки: standalone или микрофронтенд */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 3px 9px 3px 7px;
+  border: 1px solid;
+  border-radius: 999px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* точка перед текстом — цвет наследуется от модификатора */
+.badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentcolor;
+}
+
+.badgeStandalone {
+  color: var(--mode-standalone);
+  border-color: color-mix(in srgb, var(--mode-standalone) 35%, transparent);
+  background: color-mix(in srgb, var(--mode-standalone) 12%, transparent);
+}
+
+.badgeMf {
+  color: var(--mode-mf);
+  border-color: color-mix(in srgb, var(--mode-mf) 40%, transparent);
+  background: color-mix(in srgb, var(--mode-mf) 14%, transparent);
+}
+
+@media (max-width: 30rem) {
+  .inner {
+    padding-block: 10px;
+  }
+
+  .badge {
+    display: none;
+  }
+}
