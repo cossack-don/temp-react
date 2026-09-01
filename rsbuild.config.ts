@@ -13,6 +13,19 @@ export default defineConfig({
   // pluginTypedCSSModules кладёт рядом с каждым *.module.css файл
   // *.module.css.d.ts с реальными именами классов — отсюда автодополнение
   // и ошибка компиляции на опечатку в styles.someClass
+  // TanStack Router 1.170 обращается к React.use через динамический lookup —
+  // в React 18 такого экспорта нет, и строгая ESM-линковка Rspack валит прод-сборку.
+  // Сам lookup динамический и в рантайме не выполняется, поэтому понижаем до предупреждения.
+  tools: {
+    rspack: {
+      module: {
+        parser: {
+          javascript: { exportsPresence: 'warn' },
+        },
+      },
+    },
+  },
+
   plugins: [pluginReact(), pluginTypedCSSModules()],
 
   source: {

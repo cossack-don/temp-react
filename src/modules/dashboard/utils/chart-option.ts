@@ -43,9 +43,22 @@ export function buildChartOption({ dataset, visible }: BuildOptionParams): EChar
       borderWidth: 1,
       padding: [10, 12],
       textStyle: { color: ink.textPrimary, fontSize: 12 },
+      // перекрестие: вертикаль по месяцу и горизонталь по значению,
+      // на каждой оси — подпись с текущим значением
       axisPointer: {
-        type: 'line',
-        lineStyle: { color: ink.axis, width: 1 },
+        type: 'cross',
+        crossStyle: { color: ink.pointer, width: 1, type: 'dashed' },
+        lineStyle: { color: ink.pointer, width: 1 },
+        label: {
+          backgroundColor: ink.surface,
+          borderColor: ink.border,
+          borderWidth: 1,
+          color: ink.textPrimary,
+          fontSize: 11,
+          padding: [4, 7],
+          // один знак после запятой на оси значений; на оси месяцев не влияет
+          precision: 1,
+        },
       },
       formatter: (raw: unknown) => renderTooltip(raw as TooltipItem[], ink.textSecondary),
     },
@@ -111,7 +124,10 @@ function renderTooltip(items: TooltipItem[], mutedColor: string): string {
     return ''
   }
 
-  const grouped = new Map<string, { name: string; color: string; fact?: number; plan?: number }>()
+  const grouped = new Map<
+    string,
+    { name: string; color: string; fact?: number; plan?: number }
+  >()
 
   for (const item of items) {
     const [kind, productId] = (item.seriesId ?? '').split(':')

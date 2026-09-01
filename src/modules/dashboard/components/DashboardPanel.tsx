@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react'
 
+import { cn } from '@/utils'
+
 import { EChart } from '../../../components/base/EChart'
 import styles from '../Dashboard.module.css'
 import { buildChartOption } from '../utils/chart-option'
@@ -166,7 +168,7 @@ export const DashboardPanel = ({ value, onChange }: DashboardPanelProps) => {
               <button
                 key={product.id}
                 type="button"
-                className={`${styles.legendItem} ${isHidden ? styles.legendItemOff : ''}`}
+                className={cn(styles.legendItem, isHidden && styles.legendItemOff)}
                 aria-pressed={!isHidden}
                 onClick={() => toggleProduct(product.id)}
               >

@@ -1,0 +1,78 @@
+/* Карточки стека. Данные — в ./stack.data.ts. */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--tree-border);
+  border-radius: 10px;
+  background: var(--tree-card);
+}
+
+/* тонкая полоса цвета инструмента сверху */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -1px -1px auto;
+  height: 3px;
+  border-radius: 10px 10px 0 0;
+  background: var(--tone);
+}
+
+.mark {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-top: 2px;
+  border-radius: 9px;
+  background: var(--tone);
+  /* тёмный текст на светлой плашке — одинаково читается в обеих темах */
+  color: #101014;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.body {
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tree-name);
+}
+
+.version {
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--tree-tag);
+  color: var(--tree-note);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+}
+
+.what {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--tree-note);
+}

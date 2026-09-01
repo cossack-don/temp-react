@@ -36,7 +36,11 @@ export const LocalStorageDemo = () => {
           </div>
 
           <div className={styles.buttons}>
-            <button type="button" className={styles.button} onClick={() => setDensity('cozy')}>
+            <button
+              type="button"
+              className={styles.button}
+              onClick={() => setDensity('cozy')}
+            >
               cozy
             </button>
             <button

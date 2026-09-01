@@ -1,0 +1,185 @@
+.root {
+  margin: 24px 0;
+}
+
+/* легенда слоёв */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--tree-note);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: none;
+}
+
+/* кнопки «развернуть / свернуть всё» */
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.button {
+  padding: 5px 12px;
+  border: 1px solid var(--tree-border);
+  border-radius: 7px;
+  background: var(--tree-card);
+  color: var(--tree-name);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--tree-hover);
+}
+
+/* карточка группы */
+.groups {
+  display: grid;
+  gap: 14px;
+}
+
+.group {
+  border: 1px solid var(--tree-border);
+  border-left: 3px solid var(--tone, var(--tree-border));
+  border-radius: 10px;
+  background: var(--tree-card);
+  padding: 14px 16px;
+}
+
+.groupHead {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.groupName {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--tree-name);
+}
+
+.layerTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--tree-tag);
+  font-size: 11px;
+  color: var(--tree-note);
+}
+
+.groupNote,
+.groupFooter {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--tree-note);
+}
+
+.groupFooter {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--tree-border);
+}
+
+/* само дерево.
+   Селекторы намеренно с .root: тема Rspress вешает свои margin на ul/li
+   внутри .rspress-doc, и без лишнего класса она выигрывает по специфичности. */
+.root ul,
+.root li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.root ul li::before {
+  content: none;
+}
+
+.root .tree {
+  margin-top: 10px;
+}
+
+.root .nested {
+  margin: 0 0 0 9px;
+  padding-left: 13px;
+  border-left: 1px solid var(--tree-guide);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  padding: 1px 0;
+}
+
+.node {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 6px 2px 2px;
+  margin-left: -2px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--tree-name);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.node:hover {
+  background: var(--tree-hover);
+}
+
+.leaf {
+  cursor: default;
+}
+
+.leaf:hover {
+  background: none;
+}
+
+.caret {
+  display: inline-block;
+  width: 10px;
+  font-size: 10px;
+  color: var(--tree-note);
+  transition: transform 0.12s ease;
+}
+
+.caretClosed {
+  transform: rotate(-90deg);
+}
+
+.caretHidden {
+  visibility: hidden;
+}
+
+.note {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--tree-note);
+}

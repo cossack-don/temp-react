@@ -1,0 +1,17 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Обзор"
+  },
+  {
+    "type": "file",
+    "name": "section-1",
+    "label": "Раздел 1"
+  },
+  {
+    "type": "file",
+    "name": "section-2",
+    "label": "Раздел 2"
+  }
+]

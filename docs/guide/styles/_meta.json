@@ -1,0 +1,28 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Обзор"
+  },
+  {
+    "type": "file",
+    "name": "flex",
+    "label": "flex",
+    "tag": "mdx"
+  },
+  {
+    "type": "file",
+    "name": "grid",
+    "label": "grid"
+  },
+  {
+    "type": "file",
+    "name": "margin",
+    "label": "margin"
+  },
+  {
+    "type": "file",
+    "name": "padding",
+    "label": "padding"
+  }
+]

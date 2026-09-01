@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Глобальные стили сайта документации.
+   Подключается через globalStyles в rspress.config.ts.
+
+   Сюда импортируются РЕАЛЬНЫЕ сгенерированные утилиты проекта —
+   те же файлы, что использует приложение. Отдельной копии нет:
+   перегенерировали `npm run styles:flex` — доки сразу показывают новое.
+
+   app.css (токены тёмной темы приложения) НЕ импортируем: у Rspress
+   собственная светлая/тёмная тема, токены бы с ней подрались.
+   ========================================================================== */
+
+@import '../../src/app/styles/utils/flex.css';
+@import '../../src/app/styles/utils/margin.css';
+@import '../../src/app/styles/utils/padding.css';
+@import '../../src/app/styles/utils/grid.css';
+
+/* локальные токены песочницы — свои, чтобы не зависеть от внутренностей темы */
+:root {
+  --demo-bg: #f6f7f9;
+  --demo-border: #d8dbe0;
+  --demo-item-bg: #2a78d6;
+  --demo-item-text: #ffffff;
+  --demo-item-alt-bg: #eb6834;
+  --demo-label: #52514e;
+}
+
+:root.dark {
+  --demo-bg: #1a1a19;
+  --demo-border: #383835;
+  --demo-item-bg: #3987e5;
+  --demo-item-text: #ffffff;
+  --demo-item-alt-bg: #d95926;
+  --demo-label: #c3c2b7;
+}
+
+/* дерево архитектуры (ProjectTree) */
+:root {
+  --tree-card: #ffffff;
+  --tree-border: #e3e5e9;
+  --tree-note: #6a6a75;
+  --tree-name: #1a1a1f;
+  --tree-guide: #e3e5e9;
+  --tree-hover: #f3f4f7;
+  --tree-tag: #f3f4f7;
+}
+
+:root.dark {
+  --tree-card: #17171a;
+  --tree-border: #2e2e33;
+  --tree-note: #9b9ba5;
+  --tree-name: #ececf1;
+  --tree-guide: #2e2e33;
+  --tree-hover: #202025;
+  --tree-tag: #232329;
+}

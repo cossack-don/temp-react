@@ -1,0 +1,74 @@
+.wrap {
+  margin: 20px 0;
+  border: 1px solid var(--demo-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.title {
+  display: block;
+  padding: 8px 14px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--demo-label);
+  border-bottom: 1px solid var(--demo-border);
+}
+
+.stage {
+  padding: 16px;
+  background: var(--demo-bg);
+}
+
+.code {
+  margin: 0;
+  padding: 12px 14px;
+  border-top: 1px solid var(--demo-border);
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--demo-item-bg);
+  color: var(--demo-item-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.boxAlt {
+  background: var(--demo-item-alt-bg);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--demo-border);
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--demo-label);
+}
+
+.control select {
+  padding: 4px 6px;
+  border: 1px solid var(--demo-border);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}

@@ -8,7 +8,7 @@ import prettier from 'eslint-config-prettier'
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'node_modules', 'src/app/router/routeTree.gen.ts'],
+    ignores: ['dist', 'node_modules', 'docs_build'],
   },
 
   js.configs.recommended,
@@ -46,11 +46,30 @@ export default tseslint.config(
     },
   },
 
-  // файлы роутов экспортируют Route — это не компонент, но так устроен роутер
+  // Файлы маршрутов экспортируют Route — это не компонент, но так устроен роутер.
+  // Роутинг code-based, поэтому мест три: корень, лейауты и router/ внутри модулей.
   {
-    files: ['src/routes/**/*.tsx'],
+    files: [
+      'src/app/router/**/*.{ts,tsx}',
+      'src/app/layouts/**/*.route.{ts,tsx}',
+      'src/modules/*/router/**/*.{ts,tsx}',
+    ],
     rules: {
       'react-refresh/only-export-components': 'off',
+    },
+  },
+
+  // Node-окружение: генераторы CSS, локальный сервер и конфиги сборки.
+  // Без этого блока у них нет ни process, ни console — no-undef на ровном месте.
+  {
+    files: [
+      'scripts/**/*.{js,mjs,cjs}',
+      'server/**/*.{ts,js}',
+      '*.config.{js,ts,mjs}',
+      'rsbuild.*.config.ts',
+    ],
+    languageOptions: {
+      globals: globals.node,
     },
   },
 

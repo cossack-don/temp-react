@@ -31,6 +31,8 @@ export interface Chrome {
   muted: string
   grid: string
   axis: string
+  /** линии перекрестия под курсором — заметнее оси, но не спорят с сериями */
+  pointer: string
   border: string
 }
 
@@ -42,5 +44,6 @@ export const CHROME: Chrome = {
   muted: '#9a93c7',
   grid: 'rgba(255, 255, 255, 0.07)',
   axis: 'rgba(255, 255, 255, 0.16)',
+  pointer: 'rgba(255, 255, 255, 0.34)',
   border: 'rgba(255, 255, 255, 0.12)',
 }

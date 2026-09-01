@@ -43,7 +43,9 @@ export const MediaDemo = () => {
             <div className={styles.value}>{reduceMotion ? 'да' : 'нет'}</div>
           </div>
 
-          <span className={styles.label}>Потяните окно за край — значения обновятся.</span>
+          <span className={styles.label}>
+            Потяните окно за край — значения обновятся.
+          </span>
         </div>
 
         <pre className={styles.code}>{CODE}</pre>

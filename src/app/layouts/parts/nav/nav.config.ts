@@ -9,7 +9,7 @@ export interface NavItem {
 /** Пункты верхней навигации BaseLayout. Порядок = порядок в шапке. */
 export const MAIN_NAV: NavItem[] = [
   {
-    label: 'Главная',
+    label: 'Дашборд',
     link: { to: '/', activeOptions: { exact: true } },
   },
   {
@@ -17,15 +17,7 @@ export const MAIN_NAV: NavItem[] = [
     link: { to: '/posts', search: { q: '' } },
   },
   {
-    label: 'Дашборд',
-    link: { to: '/dashboard' },
-  },
-  {
     label: 'Хуки',
     link: { to: '/hooks' },
-  },
-  {
-    label: 'Архитектура',
-    link: { to: '/architecture' },
   },
 ]

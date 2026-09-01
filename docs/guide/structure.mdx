@@ -1,0 +1,61 @@
+import { ProjectTree } from '../_shared/ProjectTree'
+
+# Структура проекта
+
+Шесть слоёв: оболочка приложения, экраны, работа с бэкендом, общий код,
+локальный сервер и сборка. Кликните по папке, чтобы развернуть её.
+
+<ProjectTree />
+
+:::tip Дерево — мок, а не чтение файловой системы
+Структура описана руками в `docs/_shared/project-tree.data.ts`. Переехала
+папка — правится этот файл.
+:::
+
+## Почему bootstrap вынесен отдельно
+
+`src/main.tsx` содержит ровно одну строку — `void import('./app/bootstrap')`.
+Это не украшательство: Module Federation требует async-границы, иначе
+shared-React не успевает инициализироваться и сборка падает с `RUNTIME-006`.
+
+## Два лейаута
+
+Роутинг — code-based. Лейауты подключены как pathless-маршруты: у них есть
+`id`, но нет `path`.
+
+- **base** — шапка с навигацией и индикатором режима, все обычные страницы.
+- **clean** — голый `<main>`, для страниц, которые встраиваются в чужое
+  приложение через Module Federation.
+
+Неизвестный адрес уводится на `/`: последним ребёнком корня стоит
+splat-маршрут с `beforeLoad`, который бросает `redirect({ to: '/', replace: true })`.
+
+## Про barrel-импорты
+
+:::warning Правило, оплаченное тремя поломками
+Barrel (`index.ts`) безопасен **снаружи** слоя и опасен **внутри** него.
+
+`modules/dashboard/index.ts` для внешнего мира — хорошо.
+А вот внутри `app/` цепочка
+
+```
+router-create → routes → __root → components/index → AppGate
+  → @/api → http → configs/index → router-create
+```
+
+замкнулась в цикл, и приложение упало на ровном месте:
+`Cannot read properties of undefined`.
+
+Внутри слоя импортируйте файл напрямую: `from './query-client'`, а не
+`from '@/app/configs'`.
+:::
+
+## Конвертация регистра
+
+`src/api/adapters/caseAdapter.ts` гоняет camelCase ↔ snake_case пакетами
+`camelcase-keys` / `snakecase-keys` с `deep: true`. Отключается на конкретный
+запрос через расширение конфига axios:
+
+```ts
+api.get('/raw', { skipCaseTransform: 'response' })
+```

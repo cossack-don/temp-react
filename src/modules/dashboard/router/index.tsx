@@ -10,10 +10,10 @@ import { DashboardPage } from '../Page'
 const asString = (value: unknown): string | undefined =>
   typeof value === 'string' && value.length > 0 ? value : undefined
 
-/** Дашборд. Состояние трёх селектов живёт в URL — ссылку можно переслать. */
+/** Дашборд — главная страница. Состояние трёх селектов живёт в URL. */
 export const dashboardRoute = createRoute({
   getParentRoute: () => BaseLayoutRoute,
-  path: '/dashboard',
+  path: '/',
   validateSearch: (search: Record<string, unknown>): DashboardSelection => ({
     region: asString(search.region),
     country: asString(search.country),

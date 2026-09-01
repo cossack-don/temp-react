@@ -1,0 +1,66 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Введение"
+  },
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "Запуск"
+  },
+  {
+    "type": "file",
+    "name": "structure",
+    "label": "Структура проекта"
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "section-header",
+    "label": "Модули"
+  },
+  {
+    "type": "dir",
+    "name": "client",
+    "label": "Клиент Solo",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "client-mf",
+    "label": "Клиент MF",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "docs",
+    "label": "Документация",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "server",
+    "label": "Моковый API",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "styles",
+    "label": "CSS-утилиты",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "testing",
+    "label": "Тестирование",
+    "collapsible": true,
+    "collapsed": true
+  }
+]

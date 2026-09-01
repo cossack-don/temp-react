@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -13,11 +17,22 @@
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "types": ["@rsbuild/core/types", "node"],
+    "types": [
+      "@rsbuild/core/types",
+      "node"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["src", "rsbuild.config.ts", "rsbuild.mf.config.ts"]
+  "include": [
+    "src",
+    "docs",
+    "rsbuild.config.ts",
+    "rsbuild.mf.config.ts",
+    "rspress.config.ts"
+  ]
 }

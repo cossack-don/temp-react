@@ -3,9 +3,7 @@ import { notFoundRedirectRoute } from './not-found.route'
 import { BaseLayoutRoute } from '@/app/layouts/base/base-layout.route'
 import { CleanLayoutRoute } from '@/app/layouts/clean/clean-layout.route'
 
-import { homeRoute } from '@/modules/home'
 import { hooksRoute } from '@/modules/hooks'
-import { architectureRoute } from '@/modules/architecture'
 import { dashboardRoute, embeddedDashboardRoute } from '@/modules/dashboard'
 import { postRoute, postsRoute } from '@/modules/posts'
 
@@ -20,17 +18,10 @@ import { postRoute, postsRoute } from '@/modules/posts'
  * и уводит на главную.
  */
 export const routeTree = rootRoute.addChildren([
-  BaseLayoutRoute.addChildren([
-    homeRoute,
-    postsRoute,
-    postRoute,
-    dashboardRoute,
-    hooksRoute,
-    architectureRoute,
-  ]),
+  BaseLayoutRoute.addChildren([dashboardRoute, postsRoute, postRoute, hooksRoute]),
 
   CleanLayoutRoute.addChildren([embeddedDashboardRoute]),
 
-  // последним: неизвестный адрес уводится на главную
+  // последним: неизвестный адрес уводится на главную (это дашборд)
   notFoundRedirectRoute,
 ])
