@@ -5,5 +5,4 @@
 export { BaseLayout } from './base/BaseLayout'
 export { CleanLayout } from './clean/CleanLayout'
 
-export { Header, Nav, MAIN_NAV } from './parts'
-export type { NavItem } from './parts'
+export { Footer, Header } from './parts'

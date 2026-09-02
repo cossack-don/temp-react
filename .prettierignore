@@ -1,9 +1,9 @@
 node_modules/
 dist/
 package-lock.json
-pnpm-lock.yaml
-yarn.lock
-
 
 # генерируются pluginTypedCSSModules
 *.module.css.d.ts
+
+# генерируются scripts/css/* — правится генератор, а не результат
+src/app/styles/utils/

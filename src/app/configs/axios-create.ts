@@ -9,7 +9,7 @@ import axios from 'axios'
 const DEFAULT_BASE_URL = 'http://localhost:4000'
 const baseURL = import.meta.env.PUBLIC_API_URL ?? DEFAULT_BASE_URL
 
-export const API: AxiosInstance = axios.create({
+export const createInstanseAxios: AxiosInstance = axios.create({
   baseURL,
   timeout: 5_000,
   headers: {

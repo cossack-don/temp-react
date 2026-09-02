@@ -3,9 +3,7 @@ import { notFoundRedirectRoute } from './not-found.route'
 import { BaseLayoutRoute } from '@/app/layouts/base/base-layout.route'
 import { CleanLayoutRoute } from '@/app/layouts/clean/clean-layout.route'
 
-import { hooksRoute } from '@/modules/hooks'
 import { dashboardRoute, embeddedDashboardRoute } from '@/modules/dashboard'
-import { postRoute, postsRoute } from '@/modules/posts'
 
 /**
  * Дерево роутов — единственное место, где сходятся лейауты и модули.
@@ -18,7 +16,7 @@ import { postRoute, postsRoute } from '@/modules/posts'
  * и уводит на главную.
  */
 export const routeTree = rootRoute.addChildren([
-  BaseLayoutRoute.addChildren([dashboardRoute, postsRoute, postRoute, hooksRoute]),
+  BaseLayoutRoute.addChildren([dashboardRoute]),
 
   CleanLayoutRoute.addChildren([embeddedDashboardRoute]),
 

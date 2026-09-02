@@ -1,7 +1,6 @@
-import { useQuery } from '@tanstack/react-query'
 import type { ReactNode } from 'react'
 
-import { checkAppQueryOptions } from '@/api/check-app'
+import { useQueryCheckHealth } from '@/api/queries'
 import { BaseErrors } from './error/BaseErrors'
 import { Loading } from './loading/Loading'
 
@@ -22,7 +21,7 @@ interface AppGateProps {
  * дальше рисуем контент, а про потерю связи скажет индикатор в шапке.
  */
 export const AppGate = ({ children }: AppGateProps) => {
-  const { data, isPending, error, refetch } = useQuery(checkAppQueryOptions)
+  const { data, isPending, error, refetch } = useQueryCheckHealth()
 
   if (data) return <>{children}</>
 

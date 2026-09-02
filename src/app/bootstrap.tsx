@@ -3,29 +3,32 @@ import { createRoot } from 'react-dom/client'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider } from '@tanstack/react-router'
 
-import { APP_MODE, APP_MODE_LABEL } from './build-mode'
 import { AppGate } from './components/AppGate'
-import { queryClient, router } from '@/app/configs'
-import './styles/index.css'
+import { logApp } from '@/app/utils'
+import { initTheme } from './theme'
+import { queryClient, router, UiKitProvider } from '@/app/configs'
 
-console.info(
-  `%c ${APP_MODE_LABEL} %c ${window.location.origin} `,
-  `background:${APP_MODE === 'mf' ? '#eb6834' : '#2a78d6'};color:#fff;padding:2px 7px;border-radius:4px 0 0 4px;font-weight:600`,
-  'background:#262b36;color:#e6e8ee;padding:2px 7px;border-radius:0 4px 4px 0',
-)
+// порядок важен
+import 'rsuite/dist/rsuite-no-reset.min.css' // стили ui-kit внешнего
+import './styles/index.css' // мои стили приложения
+
+logApp() // лог и мод фронта - app
+
+// тему ставим до первого рендера, иначе первый кадр будет чужой
+initTheme()
 
 const rootElement = document.getElementById('root')
-if (!rootElement) {
-  throw new Error('Не найден элемент #root')
-}
+
+if (!rootElement) throw new Error('Не найден элемент #root')
 
 createRoot(rootElement).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      {/* пока /check-app не ответил 200 — показываем загрузку или ошибку */}
-      <AppGate>
-        <RouterProvider router={router} />
-      </AppGate>
+      <UiKitProvider>
+        <AppGate>
+          <RouterProvider router={router} />
+        </AppGate>
+      </UiKitProvider>
     </QueryClientProvider>
   </StrictMode>,
 )

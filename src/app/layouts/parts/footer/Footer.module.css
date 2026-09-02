@@ -1,0 +1,10 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface-translucent);
+}
+
+.inner {
+  max-width: 1040px;
+  margin-inline: auto;
+  padding: 16px 20px;
+}

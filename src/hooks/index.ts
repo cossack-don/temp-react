@@ -1,2 +1,2 @@
-export { useColorScheme } from './useColorScheme'
-export type { ColorScheme } from './useColorScheme'
+// Общие хуки приложения.
+// export {}

@@ -1,0 +1,36 @@
+/* Цветные маркеры серий. Компонента «легенда» в RSuite нет,
+   а цвет тут несёт смысл — связывает подпись с линией на графике. */
+
+.swatch {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin-inline-end: 6px;
+  border: 1.5px solid;
+  border-radius: 3px;
+  vertical-align: -1px;
+}
+
+/* образцы «сплошная / пунктир» справа от легенды */
+.key {
+  margin-inline-start: auto;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.line {
+  display: inline-block;
+  width: 22px;
+  height: 0;
+  border-top-width: 2px;
+  border-top-color: var(--muted);
+}
+
+.lineSolid {
+  border-top-style: solid;
+}
+
+.lineDashed {
+  border-top-style: dashed;
+  margin-inline-start: 8px;
+}

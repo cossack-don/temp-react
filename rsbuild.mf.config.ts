@@ -39,10 +39,10 @@ export default mergeRsbuildConfig(
         exposes: {
           // панель дашборда не знает про роутер — её можно рендерить где угодно
           './Dashboard': './src/modules/dashboard/index.ts',
-          // обёртка над ECharts
-          './EChart': './src/components/base',
-          // http-клиент и queryOptions
-          './api': './src/api/index.ts',
+          // график целиком: компонент, обёртка над ECharts и палитра
+          './Chart': './src/modules/chart/index.ts',
+          // http-клиент
+          './api': './src/api/core/http.ts',
         },
 
         shared: {
@@ -51,6 +51,9 @@ export default mergeRsbuildConfig(
           'react-dom': { singleton: true, requiredVersion: false },
           // общий кэш запросов между хостом и remote'ом
           '@tanstack/react-query': { singleton: true, requiredVersion: false },
+          // UI-кит тоже singleton: два экземпляра — это две копии CSS
+          // и два независимых контекста CustomProvider (тема и локаль)
+          rsuite: { singleton: true, requiredVersion: false },
         },
       }),
     ],

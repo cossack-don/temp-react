@@ -1,0 +1,15 @@
+.avatar {
+  cursor: pointer;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* шапка меню: имя, не кликается */
+.panel {
+  padding: 10px 14px;
+}
+
+.name {
+  font-weight: 600;
+}

@@ -1,20 +1,24 @@
 import { Outlet } from '@tanstack/react-router'
+import { Container, Content } from 'rsuite'
 
-import { Header } from '../parts'
+import { Footer, Header } from '../parts'
 import './BaseLayout.css'
 
 /**
- * Основной лейаут: шапка с навигацией и меткой режима сборки,
- * контент по центру с ограниченной шириной.
+ * Основной лейаут на Container из RSuite: шапка, контент, подвал.
+ * Container уже задаёт flex-колонку и min-height, поэтому своей вёрстки
+ * тут почти не осталось — только ограничение ширины контента.
  */
 export function BaseLayout() {
   return (
-    <div className="app">
+    <Container className="app">
       <Header />
 
-      <main className="main">
+      <Content className="main">
         <Outlet />
-      </main>
-    </div>
+      </Content>
+
+      <Footer />
+    </Container>
   )
 }

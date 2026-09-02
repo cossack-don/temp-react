@@ -1,14 +1,12 @@
 # ===== CLIENT =====
 node_modules/
-dist/
-.env
-.env.local
+dist
 
 # генерируются pluginTypedCSSModules
 *.module.css.d.ts
 
 
-# ===== API MOCK =====
+# ===== API MOCK SERVER =====
 server/node_modules
 
 # ===== DOCS =====

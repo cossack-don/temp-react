@@ -1,36 +1,31 @@
 import { useMemo, useState } from 'react'
+import { DateRangePicker, Heading, Panel, SelectPicker, Stack, Stat, Text } from 'rsuite'
 
-import { cn } from '@/utils'
+import { Col, Row } from '@/components/grid'
+import { Chart } from '@/modules/chart'
+import type { ChartSeries } from '@/modules/chart'
 
-import { EChart } from '../../../components/base/EChart'
-import styles from '../Dashboard.module.css'
-import { buildChartOption } from '../utils/chart-option'
-import { PRODUCTS, buildDataset, sum } from '../static/data'
-import { REGIONS, resolveSelection } from '../static/geo'
-import { SERIES_COLORS } from '../styles/theme'
+import { DATA_CENTERS, resolveSelection } from '../static/infra'
+import { METRICS, average, buildDataset, peak } from '../static/metrics'
+import { PERIOD_RANGES, defaultPeriod, periodPoints } from '../static/period'
+import type { DashboardPanelProps, DashboardSelection, PeriodRange } from '../types'
 
-export interface DashboardSelection {
-  region?: string
-  country?: string
-  city?: string
-}
-
-export interface DashboardPanelProps {
-  /** Управляемый режим: значение приходит снаружи, например из search-параметров. */
-  value?: DashboardSelection
-  /** Если не передан, панель держит выбор во внутреннем состоянии. */
-  onChange?: (next: DashboardSelection) => void
-}
-
-const numberFormat = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 })
+/** SelectPicker ждёт { label, value } — инфраструктуру храним в своём формате. */
+const toOptions = (items: { id: string; label: string }[]) =>
+  items.map((item) => ({ label: item.label, value: item.id }))
 
 /**
- * Самодостаточная панель дашборда: три связанных селекта, показатели и график.
+ * Самодостаточная панель мониторинга: каскад ДЦ → кластер → сервер,
+ * период, три показателя и график загрузки CPU / RAM / HDD.
  * Не знает про роутер — поэтому её можно отдать по Module Federation.
+ *
+ * Раскладка на сетке в 12 колонок (@/components/grid), контролы и карточки —
+ * RSuite. Своего CSS осталось немного: цветные маркеры легенды, у кита
+ * такого компонента нет.
  */
 export const DashboardPanel = ({ value, onChange }: DashboardPanelProps) => {
   const [internal, setInternal] = useState<DashboardSelection>({})
-  const [hidden, setHidden] = useState<ReadonlySet<string>>(() => new Set<string>())
+  const [period, setPeriod] = useState<PeriodRange>(defaultPeriod)
 
   const current = value ?? internal
 
@@ -42,165 +37,159 @@ export const DashboardPanel = ({ value, onChange }: DashboardPanelProps) => {
     }
   }
 
-  // каскад: город обязан принадлежать стране, страна — региону
-  const selection = resolveSelection(current.region, current.country, current.city)
+  // каскад: сервер обязан принадлежать кластеру, кластер — дата-центру
+  const selection = resolveSelection(current.dataCenter, current.cluster, current.server)
 
-  const dataset = useMemo(() => buildDataset(selection.city.id), [selection.city.id])
+  const { labels, stepLabel } = useMemo(() => periodPoints(period), [period])
 
-  const visible = useMemo(
-    () => new Set(PRODUCTS.filter((product) => !hidden.has(product.id)).map((p) => p.id)),
-    [hidden],
+  const dataset = useMemo(
+    () => buildDataset(selection.server, labels.length),
+    [selection.server, labels.length],
   )
 
-  const option = useMemo(() => buildChartOption({ dataset, visible }), [dataset, visible])
-
-  const shown = dataset.filter((item) => visible.has(item.product.id))
-  const factTotal = sum(shown.flatMap((item) => item.fact))
-  const planTotal = sum(shown.flatMap((item) => item.plan))
-  const completion = planTotal === 0 ? 0 : (factTotal / planTotal) * 100
-  const isAbovePlan = completion >= 100
-
-  const toggleProduct = (productId: string) => {
-    setHidden((currentHidden) => {
-      const next = new Set(currentHidden)
-
-      if (next.has(productId)) {
-        next.delete(productId)
-      } else if (next.size < PRODUCTS.length - 1) {
-        // хотя бы одна серия всегда остаётся на графике
-        next.add(productId)
-      }
-
-      return next
-    })
-  }
+  // приведение к форме, которую ждёт модуль графика.
+  // Ровно то же место, где данные из API легли бы вместо мока.
+  const chartSeries = useMemo<ChartSeries[]>(
+    () =>
+      dataset.map((item) => ({
+        id: item.metric.id,
+        label: item.metric.label,
+        values: item.current,
+        compare: item.previous,
+      })),
+    [dataset],
+  )
 
   return (
-    <div className={styles.panel}>
-      <header className={styles.head}>
-        <h1 className={styles.title}>Дашборд продаж</h1>
-        <p className={styles.place}>
-          {selection.region.label} · {selection.country.label} · {selection.city.label}
-        </p>
-      </header>
+    <Stack direction="column" alignItems="stretch" spacing={20}>
+      <Stack justifyContent="space-between" alignItems="flex-end" wrap spacing={12}>
+        <Heading level={1}>Загрузка серверов</Heading>
+        <Text muted>
+          {selection.dataCenter.label} · {selection.cluster.label} ·{' '}
+          {selection.server.label}
+        </Text>
+      </Stack>
 
-      <div className={styles.filters}>
-        <label className={styles.field}>
-          <span className={styles.label}>Регион</span>
-          <select
-            className={styles.select}
-            value={selection.region.id}
-            onChange={(event) => update({ region: event.target.value })}
-          >
-            {REGIONS.map((region) => (
-              <option key={region.id} value={region.id}>
-                {region.label}
-              </option>
-            ))}
-          </select>
-        </label>
+      {/* каскад: по четыре колонки из двенадцати, на телефоне — во всю ширину */}
+      <Row gutter={16}>
+        <Col span={{ xs: 12, md: 4 }}>
+          <SelectPicker
+            block
+            cleanable={false}
+            label="Дата-центр"
+            data={toOptions(DATA_CENTERS)}
+            value={selection.dataCenter.id}
+            onChange={(next) => update({ dataCenter: next ?? undefined })}
+          />
+        </Col>
 
-        <label className={styles.field}>
-          <span className={styles.label}>Страна</span>
-          <select
-            className={styles.select}
-            value={selection.country.id}
-            onChange={(event) =>
-              update({ region: selection.region.id, country: event.target.value })
+        <Col span={{ xs: 12, md: 4 }}>
+          <SelectPicker
+            block
+            cleanable={false}
+            label="Кластер"
+            data={toOptions(selection.dataCenter.clusters)}
+            value={selection.cluster.id}
+            onChange={(next) =>
+              update({ dataCenter: selection.dataCenter.id, cluster: next ?? undefined })
             }
-          >
-            {selection.region.countries.map((country) => (
-              <option key={country.id} value={country.id}>
-                {country.label}
-              </option>
-            ))}
-          </select>
-        </label>
+          />
+        </Col>
 
-        <label className={styles.field}>
-          <span className={styles.label}>Город</span>
-          <select
-            className={styles.select}
-            value={selection.city.id}
-            onChange={(event) =>
+        <Col span={{ xs: 12, md: 4 }}>
+          <SelectPicker
+            block
+            cleanable={false}
+            label="Сервер"
+            data={toOptions(selection.cluster.servers)}
+            value={selection.server.id}
+            onChange={(next) =>
               update({
-                region: selection.region.id,
-                country: selection.country.id,
-                city: event.target.value,
+                dataCenter: selection.dataCenter.id,
+                cluster: selection.cluster.id,
+                server: next ?? undefined,
               })
             }
-          >
-            {selection.country.cities.map((city) => (
-              <option key={city.id} value={city.id}>
-                {city.label}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
+          />
+        </Col>
+      </Row>
 
-      <div className={styles.tiles}>
-        <div className={styles.tile}>
-          <span className={styles.tileLabel}>Факт за год, млн ₽</span>
-          <span className={styles.tileValue}>{numberFormat.format(factTotal)}</span>
-        </div>
-        <div className={styles.tile}>
-          <span className={styles.tileLabel}>План за год, млн ₽</span>
-          <span className={styles.tileValue}>{numberFormat.format(planTotal)}</span>
-        </div>
-        <div className={styles.tile}>
-          <span className={styles.tileLabel}>Выполнение плана</span>
-          <span
-            className={`${styles.tileValue} ${isAbovePlan ? styles.above : styles.below}`}
-          >
-            {isAbovePlan ? '+' : '−'}
-            {Math.abs(completion - 100).toFixed(1)}%
-          </span>
-        </div>
-      </div>
-
-      <section className={styles.chartCard}>
-        <div className={styles.legend}>
-          {PRODUCTS.map((product, index) => {
-            const isHidden = hidden.has(product.id)
-
-            return (
-              <button
-                key={product.id}
-                type="button"
-                className={cn(styles.legendItem, isHidden && styles.legendItemOff)}
-                aria-pressed={!isHidden}
-                onClick={() => toggleProduct(product.id)}
-              >
-                <span
-                  className={styles.swatch}
-                  style={{
-                    background: isHidden ? 'transparent' : SERIES_COLORS[index],
-                    borderColor: SERIES_COLORS[index],
-                  }}
-                />
-                {product.label}
-              </button>
-            )
-          })}
-
-          <span className={styles.legendKey}>
-            <span className={`${styles.line} ${styles.lineSolid}`} /> факт
-            <span className={`${styles.line} ${styles.lineDashed}`} /> план
-          </span>
-        </div>
-
-        <EChart
-          option={option}
-          height={400}
-          label={`Выручка по месяцам, ${selection.city.label}: факт и план по пяти продуктам`}
+      {/* период: календарь с часами и быстрыми вариантами внутри,
+          рядом подпись о том, с каким шагом легли точки */}
+      <Stack wrap spacing={12} alignItems="center">
+        <DateRangePicker
+          cleanable={false}
+          label="Период"
+          // время в формате включает панель выбора часов и минут,
+          // и оно же показывается в самом поле
+          format="dd.MM.yy HH:mm"
+          character=" – "
+          style={{ width: 390 }}
+          ranges={PERIOD_RANGES}
+          value={period}
+          onChange={(next) => {
+            if (next?.[0] && next[1]) {
+              setPeriod([next[0], next[1]])
+            }
+          }}
         />
 
-        <p className={styles.hint}>
-          Выручка по месяцам, млн ₽. Сплошная линия — факт, пунктир того же цвета — план.
-          Клик по продукту в легенде убирает его пару линий с графика.
-        </p>
-      </section>
-    </div>
+        <Text muted size="sm">
+          {labels.length} точек · шаг {stepLabel}
+        </Text>
+      </Stack>
+
+      {/* показатели: по одному на метрику, четыре колонки из двенадцати */}
+      <Row gutter={16}>
+        {METRICS.map((metric) => {
+          const series = dataset.find((item) => item.metric.id === metric.id)
+          const now = average(series?.current ?? [])
+          const before = average(series?.previous ?? [])
+          const delta = now - before
+          const isUp = delta >= 0
+
+          return (
+            <Col key={metric.id} span={{ xs: 12, md: 4 }}>
+              <Stat bordered>
+                <Stat.Label>
+                  {metric.label} · {metric.caption}
+                </Stat.Label>
+                <Stat.Value>
+                  {now.toFixed(1)}
+                  <Stat.ValueUnit>%</Stat.ValueUnit>
+                </Stat.Value>
+                <Stat.Trend indicator={isUp ? 'up' : 'down'}>
+                  {isUp ? '+' : '−'}
+                  {Math.abs(delta).toFixed(1)} п.п. · пик {peak(series?.current ?? [])}%
+                </Stat.Trend>
+              </Stat>
+            </Col>
+          )
+        })}
+      </Row>
+
+      {/* график занимает все двенадцать колонок */}
+      <Row>
+        <Col span={12}>
+          <Panel bordered>
+            <Chart
+              series={chartSeries}
+              labels={labels}
+              unit="%"
+              max={100}
+              compareLabels={['период', 'прошлый']}
+              label={`Загрузка ${selection.server.label}: CPU, RAM и HDD, текущий и прошлый период`}
+            />
+
+            <Text muted size="sm">
+              Загрузка в процентах. Шаг по оси подбирается под длину периода: минуты за
+              час, часы за сутки, дни за неделю и дольше. Сплошная линия — выбранный
+              период, пунктир того же цвета — предыдущий такой же длины. Клик по метрике в
+              легенде убирает её пару линий с графика.
+            </Text>
+          </Panel>
+        </Col>
+      </Row>
+    </Stack>
   )
 }

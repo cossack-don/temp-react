@@ -7,3 +7,7 @@
 @import './utils/margin.css';
 @import './utils/padding.css';
 @import './utils/grid.css';
+
+/* ui-kit: перекраска RSuite под токены приложения.
+   Строго после импорта rsuite-no-reset.min.css в bootstrap.tsx */
+@import './rsuite-theme.css';

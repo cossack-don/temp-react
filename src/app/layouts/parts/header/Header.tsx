@@ -1,45 +1,47 @@
 import { Link } from '@tanstack/react-router'
+import { Header as RsHeader, Navbar, Stack, Tag } from 'rsuite'
 
-import { APP_MODE, APP_MODE_LABEL } from '../../../build-mode'
-import { ApiStatus } from '../api-status'
-import { Nav } from '../nav'
+import { APP_MODE, APP_MODE_LABEL, IS_MF } from '@/build-mode'
+import { ProfileMenu } from './ui/profile'
+import { ThemeSwitch } from './ui/theme-switcher'
 import styles from './Header.module.css'
 
 /**
- * Шапка приложения: знак, название, метка режима сборки и навигация.
- * Разметку и стили меню держит Nav — шапка только ставит его на место.
+ * Шапка приложения на Container.Header + Navbar из кита.
  *
- * Шапка липкая и полупрозрачная с размытием, поэтому контент под ней
- * виден, но не мешает читать навигацию.
+ * Справа: переключатель темы и кружок профиля.
+ * Пунктов меню нет — в приложении одна страница, и ссылка на неё же
+ * из шапки только мешала.
+ *
+ * Липкость и полупрозрачность — своим CSS-модулем: у Navbar такого режима
+ * нет, а без него контент уезжает под шапку без предупреждения.
+ * Цвет метки режима сборки тоже свой: у Tag фиксированная палитра,
+ * а нам нужны токены --mode-standalone / --mode-mf.
  */
 export const Header = () => {
-  const isMf = APP_MODE === 'mf'
-
   return (
-    <header className={styles.header}>
-      <div className={styles.inner}>
-        <div className={styles.brand}>
+    <RsHeader className={styles.header}>
+      <Navbar appearance="subtle" className={styles.navbar}>
+        <Navbar.Brand as={Link} to="/" className={styles.brand}>
           <span className={styles.mark} aria-hidden="true">
             t
           </span>
+          temp-react
+        </Navbar.Brand>
 
-          <Link to="/" className={styles.logo}>
-            temp-react
-          </Link>
+        <Tag
+          size="sm"
+          className={IS_MF ? styles.tagMf : styles.tagStandalone}
+          title={`Собрано конфигом ${APP_MODE}`}
+        >
+          {APP_MODE_LABEL} · :{window.location.port || '80'}
+        </Tag>
 
-          <span
-            className={`${styles.badge} ${isMf ? styles.badgeMf : styles.badgeStandalone}`}
-            title={`Собрано конфигом ${APP_MODE}`}
-          >
-            {APP_MODE_LABEL} · :{window.location.port || '80'}
-          </span>
-        </div>
-
-        <div className={styles.right}>
-          <ApiStatus />
-          <Nav />
-        </div>
-      </div>
-    </header>
+        <Stack className={styles.right} spacing={12}>
+          <ThemeSwitch />
+          <ProfileMenu />
+        </Stack>
+      </Navbar>
+    </RsHeader>
   )
 }

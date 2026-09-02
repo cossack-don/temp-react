@@ -1,4 +1,2 @@
-export { ApiStatus } from './api-status'
+export { Footer } from './footer'
 export { Header } from './header/Header'
-export { Nav, MAIN_NAV } from './nav'
-export type { NavItem } from './nav'

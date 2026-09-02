@@ -1,1 +1,1 @@
-export const CONST_VERSION_APP = '1.0.0'
+export { CONST_VERSION_APP } from './version'

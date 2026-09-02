@@ -99,13 +99,16 @@ export const setupInterceptors = (instance: AxiosInstance): (() => void) => {
   )
 
   const responseId = instance.interceptors.response.use(
-    (response: AxiosResponse): AxiosResponse => {
+    (response: AxiosResponse) => {
       // ответ сервера: snake_case → camelCase
-      if (!skipsResponse(response.config)) {
-        response.data = caseAdapter.toClient(response.data)
-      }
+      const data = skipsResponse(response.config)
+        ? response.data
+        : caseAdapter.toClient(response.data)
 
-      return response
+      // Наверх отдаём сразу тело, а не AxiosResponse: вызывающему коду
+      // ни статус, ни заголовки не нужны. Правду об инстансе после этого
+      // описывает тип DataClient в http.ts.
+      return data
     },
     (error: unknown): Promise<never> => {
       // отмену запроса (AbortSignal от TanStack Query) пробрасываем как есть,

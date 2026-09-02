@@ -4,20 +4,21 @@ import { BaseLayoutRoute } from '@/app/layouts/base/base-layout.route'
 import { CleanLayoutRoute } from '@/app/layouts/clean/clean-layout.route'
 
 import { DashboardPanel } from '../components'
-import type { DashboardSelection } from '../components'
 import { DashboardPage } from '../Page'
+import type { DashboardSelection } from '../types'
 
 const asString = (value: unknown): string | undefined =>
   typeof value === 'string' && value.length > 0 ? value : undefined
 
-/** Дашборд — главная страница. Состояние трёх селектов живёт в URL. */
+/** Дашборд — главная страница. Каскад ДЦ → кластер → сервер живёт в URL,
+ *  период остаётся во внутреннем состоянии панели. */
 export const dashboardRoute = createRoute({
   getParentRoute: () => BaseLayoutRoute,
   path: '/',
   validateSearch: (search: Record<string, unknown>): DashboardSelection => ({
-    region: asString(search.region),
-    country: asString(search.country),
-    city: asString(search.city),
+    dataCenter: asString(search.dataCenter),
+    cluster: asString(search.cluster),
+    server: asString(search.server),
   }),
   component: DashboardRouteComponent,
 })
