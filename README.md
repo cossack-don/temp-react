@@ -1,5 +1,7 @@
 # Краткое погружение в Шаблон React.js
 
+## Более подробная информация вся в документации - DOCS
+
 ## Инфраструктура
 
 ```md
@@ -17,7 +19,7 @@
 npm install
 npm run dev # http://localhost:3000
 
-npm run build # прод-сборка в dist/
+npm run build # прод-сборка в dist
 npm run preview # локальный просмотр прод-сборки
 ```
 
@@ -31,7 +33,7 @@ npm run preview # локальный просмотр прод-сборки
 
 npm install
 npm run dev:mf # http://localhost:3001
-npm run build:mf # прод-сборка в dist/
+npm run build:mf # прод-сборка в dist
 npm run preview:mf # локальный просмотр прод-сборки
 ```
 
@@ -51,7 +53,7 @@ npm run server # http://localhost:4000
 
 npm install
 npm run dev:docs # http://localhost:3100
-npm run build:docs # прод-сборка в dist/
+npm run build:docs # прод-сборка в dist
 npm run preiew:docs # локальный просмотр прод-сборки
 ```
 

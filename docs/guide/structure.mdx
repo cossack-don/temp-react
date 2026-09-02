@@ -7,11 +7,6 @@ import { ProjectTree } from '../_shared/ProjectTree'
 
 <ProjectTree />
 
-:::tip Дерево — мок, а не чтение файловой системы
-Структура описана руками в `docs/_shared/project-tree.data.ts`. Переехала
-папка — правится этот файл.
-:::
-
 ## Почему bootstrap вынесен отдельно
 
 `src/main.tsx` содержит ровно одну строку — `void import('./app/bootstrap')`.
@@ -30,27 +25,7 @@ shared-React не успевает инициализироваться и сб�
 Неизвестный адрес уводится на `/`: последним ребёнком корня стоит
 splat-маршрут с `beforeLoad`, который бросает `redirect({ to: '/', replace: true })`.
 
-## Про barrel-импорты
-
-:::warning Правило, оплаченное тремя поломками
-Barrel (`index.ts`) безопасен **снаружи** слоя и опасен **внутри** него.
-
-`modules/dashboard/index.ts` для внешнего мира — хорошо.
-А вот внутри `app/` цепочка
-
-```
-router-create → routes → __root → components/index → AppGate
-  → @/api → http → configs/index → router-create
-```
-
-замкнулась в цикл, и приложение упало на ровном месте:
-`Cannot read properties of undefined`.
-
-Внутри слоя импортируйте файл напрямую: `from './query-client'`, а не
-`from '@/app/configs'`.
-:::
-
-## Конвертация регистра
+## Адаптер для API snake_case to CamelCase и CamelCase to snake_case
 
 `src/api/adapters/caseAdapter.ts` гоняет camelCase ↔ snake_case пакетами
 `camelcase-keys` / `snakecase-keys` с `deep: true`. Отключается на конкретный

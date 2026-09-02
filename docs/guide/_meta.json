@@ -23,6 +23,13 @@
   },
   {
     "type": "dir",
+    "name": "styles",
+    "label": "CSS-утилиты",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
     "name": "client",
     "label": "Клиент Solo",
     "collapsible": true,
@@ -37,25 +44,12 @@
   },
   {
     "type": "dir",
-    "name": "docs",
-    "label": "Документация",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
     "name": "server",
     "label": "Моковый API",
     "collapsible": true,
     "collapsed": true
   },
-  {
-    "type": "dir",
-    "name": "styles",
-    "label": "CSS-утилиты",
-    "collapsible": true,
-    "collapsed": true
-  },
+
   {
     "type": "dir",
     "name": "testing",
