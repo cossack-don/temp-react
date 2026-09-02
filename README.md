@@ -22,9 +22,8 @@ npm run preview # локальный просмотр прод-сборки
 ```
 
 ```bash
-# .env .env.example
-
-
+# .env.development
+# .env.production
 ```
 
 ```bash
